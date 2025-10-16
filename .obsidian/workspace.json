@@ -138,13 +138,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Raspberry Pi/This is a test.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of This is a test"
+              "title": "Outline"
             }
           }
         ],
@@ -167,18 +166,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5f6cce7e5054fb3e",
+  "active": "5eef394a64f4f606",
   "lastOpenFiles": [
-    "docs",
     "Raspberry Pi/This is a test.md",
-    "docs/Raspberry Pi/enable-vnc.md",
+    "docs",
+    "docs/raspberry-pi/enable-vnc.md",
     "docs/index.md",
     "This is a test.md",
-    "docs/Networking/setup-nanostation.md",
-    "docs/Networking/setup-nanostation.md",
+    "docs/networking/setup-nanostation.md",
+    "docs/networking/setup-nanostation.md",
     "Welcome.md",
-    "docs/Raspberry Pi",
-    "docs/Networking",
+    "docs/raspberry-pi",
+    "docs/networking",
     "index",
     "Untitled (2)"
   ]
