@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cdfd6c8a08b4bdcb",
+        "id": "0bb6484ba7941d38",
         "type": "tabs",
         "children": [
           {
-            "id": "40d3d03ed9d75356",
+            "id": "5eef394a64f4f606",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -138,12 +138,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Raspberry Pi/This is a test.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of This is a test"
             }
           }
         ],
@@ -166,7 +167,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "40d3d03ed9d75356",
+  "active": "5f6cce7e5054fb3e",
   "lastOpenFiles": [
     "Raspberry Pi/This is a test.md",
     "Raspberry Pi/enable-vnc.md",
