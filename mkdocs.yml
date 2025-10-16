@@ -1,0 +1,44 @@
+site_name: Airbreach
+site_url: https://dirtyoptics.github.io/airbreach/
+docs_dir: .
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+    - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+plugins:
+  - search
+  - minify
+#  - git-revision-date-localized
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - codehilite
+  - attr_list
+  - def_list
+  - toc:
+      permalink: true
+  - tables
+
+nav:
+  - Home: index.md
+  - Networking:
+      - Setup Nanostation: networking/setup-nanostation.md
+  - Raspberry Pi:
+      - Enable VNC: raspberry-pi/enable-vnc.md
