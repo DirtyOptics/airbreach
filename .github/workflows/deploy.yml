@@ -1,4 +1,4 @@
-name: Deploy MkDocs site
+name: Build and Deploy MkDocs Site
 
 on:
   push:
@@ -6,20 +6,23 @@ on:
       - main
 
 jobs:
-  build-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.x
+          python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install mkdocs-material mkdocs-minify-plugin
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs-material mkdocs-minify-plugin
 
       - name: Build and deploy
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: mkdocs gh-deploy --force --remote-name origin
+        run: mkdocs gh-deploy --force --remote-name https://${GH_TOKEN}@github.com/DirtyOptics/airbreach.git
