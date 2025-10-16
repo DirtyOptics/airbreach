@@ -169,15 +169,16 @@
   },
   "active": "5f6cce7e5054fb3e",
   "lastOpenFiles": [
+    "docs",
     "Raspberry Pi/This is a test.md",
-    "Raspberry Pi/enable-vnc.md",
-    "index.md",
+    "docs/Raspberry Pi/enable-vnc.md",
+    "docs/index.md",
     "This is a test.md",
-    "Networking/setup-nanostation.md",
-    "Networking/setup-nanostation.md",
+    "docs/Networking/setup-nanostation.md",
+    "docs/Networking/setup-nanostation.md",
     "Welcome.md",
-    "Raspberry Pi",
-    "Networking",
+    "docs/Raspberry Pi",
+    "docs/Networking",
     "index",
     "Untitled (2)"
   ]
