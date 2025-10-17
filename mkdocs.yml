@@ -50,10 +50,10 @@ plugins:
       lang: en
   - minify:
       minify_html: true
-  - git-revision-date-localized:
-      enable_creation_date: true
-      enable_modification_date: true
-      type: timeago
+#  - git-revision-date-localized:
+#      enable_creation_date: true
+#      enable_modification_date: true
+#      type: timeago
 
 markdown_extensions:
   - admonition       # ✅ Callouts/notes
@@ -76,8 +76,8 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - toc:
       permalink: true
       title: On this page
