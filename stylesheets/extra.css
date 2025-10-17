@@ -1,0 +1,25 @@
+/* Custom navigation layout */
+.md-sidebar--primary {
+    order: 1;
+}
+
+.md-content {
+    order: 2;
+}
+
+.md-sidebar--secondary {
+    order: 3;
+}
+
+/* Ensure proper spacing */
+.md-main__inner {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Make sure TOC appears on the right */
+.md-sidebar--secondary {
+    position: sticky;
+    top: 0;
+    height: fit-content;
+}
