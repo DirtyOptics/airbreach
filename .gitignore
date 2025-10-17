@@ -33,3 +33,6 @@ Thumbs.db
 
 # Insync temporary files
 *.insyncdl
+
+# Template files
+template.md
