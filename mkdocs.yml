@@ -46,7 +46,7 @@ theme:
     edit: material/pencil
     view: material/eye
 
-# Navigation configuration
+# Sidebar configuration
 nav:
   - Home: index.md
   - Networking:
@@ -55,6 +55,7 @@ nav:
       - Enable VNC: raspberry-pi/enable-vnc.md
   - Proxmox:
     - PCI Passthrough: proxmox/PROXMOX-PCI Passthrough.md
+
 
 plugins:
   - search:
