@@ -14,6 +14,7 @@ theme:
     - navigation.expand
     - navigation.path
     - navigation.indexes
+    - navigation.sidebar
     - content.code.annotate
     - content.code.copy
     - content.code.select
@@ -44,6 +45,16 @@ theme:
     repo: fontawesome/brands/github
     edit: material/pencil
     view: material/eye
+
+# Navigation configuration
+nav:
+  - Home: index.md
+  - Networking:
+      - Setup Nanostation: networking/setup-nanostation.md
+  - Raspberry Pi:
+      - Enable VNC: raspberry-pi/enable-vnc.md
+  - Proxmox:
+    - PCI Passthrough: proxmox/PROXMOX-PCI Passthrough.md
 
 plugins:
   - search:
@@ -85,13 +96,4 @@ markdown_extensions:
   - tables
   - pymdownx.tasklist:
       custom_checkbox: true
-
-nav:
-  - Home: index.md
-  - Networking:
-      - Setup Nanostation: networking/setup-nanostation.md
-  - Raspberry Pi:
-      - Enable VNC: raspberry-pi/enable-vnc.md
-  - Proxmox:
-    - PCI Passthrough: proxmox/PROXMOX-PCI Passthrough.md
 
