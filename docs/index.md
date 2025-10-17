@@ -1,32 +1,21 @@
 # 🚀 Welcome to Airbreach
 
-<div class="grid cards" markdown>
+## 🛠️ Technology Categories
 
--   :material-server-network:{ .lg .middle } **Networking**
-
-    ---
-
-    Master network configuration, routing, and infrastructure setup
-
+!!! info "Networking"
+    :material-server-network: **Master network configuration, routing, and infrastructure setup**
+    
     [:octicons-arrow-right-24: Explore Networking](networking/setup-nanostation.md)
 
--   :material-raspberry-pi:{ .lg .middle } **Raspberry Pi**
-
-    ---
-
-    Learn to configure and optimize Raspberry Pi systems
-
+!!! info "Raspberry Pi"
+    :material-raspberry-pi: **Learn to configure and optimize Raspberry Pi systems**
+    
     [:octicons-arrow-right-24: Explore Raspberry Pi](raspberry-pi/enable-vnc.md)
 
--   :material-server:{ .lg .middle } **Proxmox**
-
-    ---
-
-    Virtualization and container management with Proxmox
-
+!!! info "Proxmox"
+    :material-server: **Virtualization and container management with Proxmox**
+    
     [:octicons-arrow-right-24: Explore Proxmox](proxmox/PROXMOX-PCI%20Passthrough.md)
-
-</div>
 
 ---
 
@@ -82,36 +71,23 @@
 
 ## 📊 Learning Paths
 
-<div class="grid cards" markdown>
-
--   :material-account-hard-hat:{ .lg .middle } **Beginner**
-
-    ---
-
-    New to IT infrastructure? Start here with fundamental concepts.
-
+!!! success "Beginner"
+    :material-account-hard-hat: **New to IT infrastructure? Start here with fundamental concepts.**
+    
     **Duration:** 2-4 weeks  
     **Prerequisites:** Basic computer knowledge
 
--   :material-cog:{ .lg .middle } **Intermediate**
-
-    ---
-
-    Ready to dive deeper? Explore advanced configurations and optimizations.
-
+!!! tip "Intermediate"
+    :material-cog: **Ready to dive deeper? Explore advanced configurations and optimizations.**
+    
     **Duration:** 4-8 weeks  
     **Prerequisites:** Basic networking knowledge
 
--   :material-rocket-launch:{ .lg .middle } **Advanced**
-
-    ---
-
-    Expert-level content for professionals and system architects.
-
+!!! warning "Advanced"
+    :material-rocket-launch: **Expert-level content for professionals and system architects.**
+    
     **Duration:** 8+ weeks  
     **Prerequisites:** Strong networking and virtualization background
-
-</div>
 
 ---
 
@@ -127,27 +103,14 @@
 
 ## 📈 Progress Tracking
 
-<div class="grid cards" markdown>
+!!! success "Completed"
+    :material-check-circle: **Track your completed guides and certifications**
 
--   :material-check-circle:{ .lg .middle } **Completed**
+!!! info "In Progress"
+    :material-clock-outline: **Monitor your current learning journey**
 
-    ---
-
-    Track your completed guides and certifications
-
--   :material-clock-outline:{ .lg .middle } **In Progress**
-
-    ---
-
-    Monitor your current learning journey
-
--   :material-trophy:{ .lg .middle } **Achievements**
-
-    ---
-
-    Earn badges and recognition for your progress
-
-</div>
+!!! tip "Achievements"
+    :material-trophy: **Earn badges and recognition for your progress**
 
 ---
 
