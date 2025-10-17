@@ -45,9 +45,6 @@ theme:
     edit: material/pencil
     view: material/eye
 
-# Custom CSS
-extra_css:
-  - stylesheets/extra.css
 
 # Navigation configuration
 nav:
