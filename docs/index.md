@@ -84,34 +84,34 @@
 
 ## 📊 Learning Paths
 
-<div class="grid" markdown>
+<div class="grid cards" markdown>
 
-:material-account-hard-hat: **Beginner**
+-   :material-account-hard-hat:{ .lg .middle } **Beginner**
 
-New to IT infrastructure? Start here with fundamental concepts.
+    ---
 
-**Duration:** 2-4 weeks  
-**Prerequisites:** Basic computer knowledge
+    New to IT infrastructure? Start here with fundamental concepts.
 
-{ .card }
+    **Duration:** 2-4 weeks  
+    **Prerequisites:** Basic computer knowledge
 
-:material-cog: **Intermediate**
+-   :material-cog:{ .lg .middle } **Intermediate**
 
-Ready to dive deeper? Explore advanced configurations and optimizations.
+    ---
 
-**Duration:** 4-8 weeks  
-**Prerequisites:** Basic networking knowledge
+    Ready to dive deeper? Explore advanced configurations and optimizations.
 
-{ .card }
+    **Duration:** 4-8 weeks  
+    **Prerequisites:** Basic networking knowledge
 
-:material-rocket-launch: **Advanced**
+-   :material-rocket-launch:{ .lg .middle } **Advanced**
 
-Expert-level content for professionals and system architects.
+    ---
 
-**Duration:** 8+ weeks  
-**Prerequisites:** Strong networking and virtualization background
+    Expert-level content for professionals and system architects.
 
-{ .card }
+    **Duration:** 8+ weeks  
+    **Prerequisites:** Strong networking and virtualization background
 
 </div>
 
@@ -129,25 +129,25 @@ Expert-level content for professionals and system architects.
 
 ## 📈 Progress Tracking
 
-<div class="grid" markdown>
+<div class="grid cards" markdown>
 
-:material-check-circle: **Completed**
+-   :material-check-circle:{ .lg .middle } **Completed**
 
-Track your completed guides and certifications
+    ---
 
-{ .card }
+    Track your completed guides and certifications
 
-:material-clock-outline: **In Progress**
+-   :material-clock-outline:{ .lg .middle } **In Progress**
 
-Monitor your current learning journey
+    ---
 
-{ .card }
+    Monitor your current learning journey
 
-:material-trophy: **Achievements**
+-   :material-trophy:{ .lg .middle } **Achievements**
 
-Earn badges and recognition for your progress
+    ---
 
-{ .card }
+    Earn badges and recognition for your progress
 
 </div>
 
