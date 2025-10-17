@@ -11,6 +11,7 @@ theme:
     - navigation.tabs
     - navigation.sections
     - content.code.annotate
+    - content.code.copy
     - search.suggest
     - search.highlight
     - toc.integrate
@@ -28,6 +29,7 @@ theme:
 plugins:
   - search
   - minify
+  - codehilite
 #  - git-revision-date-localized  # Uncomment if you want last updated dates
 
 markdown_extensions:
