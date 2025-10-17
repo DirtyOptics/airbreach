@@ -29,7 +29,6 @@ theme:
 plugins:
   - search
   - minify
-  - codehilite
 #  - git-revision-date-localized  # Uncomment if you want last updated dates
 
 markdown_extensions:
