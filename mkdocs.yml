@@ -46,7 +46,7 @@ theme:
     edit: material/pencil
     view: material/eye
 
-# Sidebar configuration
+# Navigation configuration
 nav:
   - Home: index.md
   - Networking:
@@ -56,17 +56,7 @@ nav:
   - Proxmox:
     - PCI Passthrough: proxmox/PROXMOX-PCI Passthrough.md
 
-
-plugins:
-  - search:
-      lang: en
-  - minify:
-      minify_html: true
-#  - git-revision-date-localized:
-#      enable_creation_date: true
-#      enable_modification_date: true
-#      type: timeago
-
+# Table of contents configuration
 markdown_extensions:
   - admonition       # ✅ Callouts/notes
   - footnotes
@@ -94,7 +84,20 @@ markdown_extensions:
   - toc:
       permalink: true
       title: On this page
+      level: 2
   - tables
   - pymdownx.tasklist:
       custom_checkbox: true
+
+
+plugins:
+  - search:
+      lang: en
+  - minify:
+      minify_html: true
+#  - git-revision-date-localized:
+#      enable_creation_date: true
+#      enable_modification_date: true
+#      type: timeago
+
 
