@@ -3,6 +3,9 @@ venv/
 env/
 .venv/
 
+# Obsidian settings
+.obsidian/
+
 # MkDocs build output
 site/
 
