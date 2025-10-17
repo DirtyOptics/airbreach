@@ -47,5 +47,5 @@ nav:
   - Raspberry Pi:
       - Enable VNC: raspberry-pi/enable-vnc.md
   - Proxmox:
-    - PCI Passthrough: proxmox/PROXMOX -  PCI Passthrough.md
+    - PCI Passthrough: proxmox/PROXMOX-PCI Passthrough.md
 

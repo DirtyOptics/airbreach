@@ -11,14 +11,10 @@
             "id": "5eef394a64f4f606",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/proxmox/PROXMOX -  PCI Passthrough.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "PROXMOX -  PCI Passthrough"
+              "title": "New tab"
             }
           }
         ]
@@ -170,8 +166,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5f6cce7e5054fb3e",
+  "active": "5eef394a64f4f606",
   "lastOpenFiles": [
+    "docs/proxmox/PROXMOX -  PCI Passthrough.md",
+    "docs/proxmox/PROXMOX-PCI Passthrough.md",
     "Raspberry Pi/This is a test.md",
     "docs",
     "docs/raspberry-pi/enable-vnc.md",
