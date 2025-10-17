@@ -679,11 +679,11 @@ This step is not necessary for the passthrough, but helps keeping things clean.
 For ignoring some annoying “warnings” in your <code>dmesg</code> output, do the following:</p>
 </blockquote>
 <p>Open:</p>
-<div class="codehilite"><pre><span></span><code>nano<span class="w"> </span>/etc/modprobe.d/kvm.conf
+<div class="codehilite"><pre><span></span><code>nano /etc/modprobe.d/kvm.conf
 </code></pre></div>
 
 <p>Add the following line:</p>
-<div class="codehilite"><pre><span></span><code>options<span class="w"> </span>kvm<span class="w"> </span><span class="nv">ignore_msrs</span><span class="o">=</span>Y<span class="w"> </span><span class="nv">report_ignored_msrs</span><span class="o">=</span><span class="m">0</span>
+<div class="codehilite"><pre><span></span><code>options kvm ignore_msrs=Y report_ignored_msrs=0
 </code></pre></div>
 
 <hr />
@@ -691,11 +691,11 @@ For ignoring some annoying “warnings” in your <code>dmesg</code> output, d
 <h4 id="for-intel-cpus">For <strong>Intel</strong> CPUs<a class="headerlink" href="#for-intel-cpus" title="Permanent link">&para;</a></h4>
 <p>For <strong>GRUB</strong>;<br />
 Replace the current similar line with this one in your grub file:</p>
-<div class="codehilite"><pre><span></span><code>nano<span class="w"> </span>/etc/default/grub
+<div class="codehilite"><pre><span></span><code>nano /etc/default/grub
 </code></pre></div>
 
 <p>Make these changes to that file:</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">GRUB_CMDLINE_LINUX_DEFAULT</span><span class="o">=</span><span class="s2">&quot;quiet intel_iommu=on iommu=pt initcall_blacklist=sysfb_init&quot;</span>
+<div class="codehilite"><pre><span></span><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet intel_iommu=on iommu=pt initcall_blacklist=sysfb_init&quot;
 </code></pre></div>
 
 <blockquote>
@@ -708,11 +708,11 @@ This config is from a youtube video which seemed to work and display "IOMMU Enab
 <h4 id="for-amd-cpus">For <strong>AMD</strong> CPUs<a class="headerlink" href="#for-amd-cpus" title="Permanent link">&para;</a></h4>
 <p>For <strong>GRUB</strong>;<br />
 Replace the current similar line with this one in your grub file:</p>
-<div class="codehilite"><pre><span></span><code>nano<span class="w"> </span>/etc/default/grub
+<div class="codehilite"><pre><span></span><code>nano /etc/default/grub
 </code></pre></div>
 
 <p>Make these changes to that file:</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">GRUB_CMDLINE_LINUX_DEFAULT</span><span class="o">=</span><span class="s2">&quot;quiet iommu=pt initcall_blacklist=sysfb_init&quot;</span>
+<div class="codehilite"><pre><span></span><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet iommu=pt initcall_blacklist=sysfb_init&quot;
 </code></pre></div>
 
 <p>Hit <strong>Ctrl + X → Y → Enter</strong> to save changes.</p>
@@ -722,18 +722,18 @@ Replace the current similar line with this one in your grub file:</p>
 Your system might not be relying on Grub, but <strong>systemd</strong> instead. This is often the case when you’re using <strong>ZFS</strong>.  So for <strong>systemd</strong>:</p>
 </blockquote>
 <h4 id="intel-cpus-systemdzfs">Intel CPUs (Systemd/ZFS)<a class="headerlink" href="#intel-cpus-systemdzfs" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><code>nano<span class="w"> </span>/etc/kernel/cmdline
+<div class="codehilite"><pre><span></span><code>nano /etc/kernel/cmdline
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="nv">root</span><span class="o">=</span><span class="nv">ZFS</span><span class="o">=</span>rpool/ROOT/pve-1<span class="w"> </span><span class="nv">boot</span><span class="o">=</span>zfs<span class="w"> </span><span class="nv">intel_iommu</span><span class="o">=</span>on<span class="w"> </span><span class="nv">iommu</span><span class="o">=</span>pt<span class="w"> </span><span class="nv">initcall_blacklist</span>
-<span class="o">=</span>sysfb_init
+<div class="codehilite"><pre><span></span><code>root=ZFS=rpool/ROOT/pve-1 boot=zfs intel_iommu=on iommu=pt initcall_blacklist
+=sysfb_init
 </code></pre></div>
 
 <h4 id="amd-cpus-systemdzfs">AMD CPUs (Systemd/ZFS)<a class="headerlink" href="#amd-cpus-systemdzfs" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><code>nano<span class="w"> </span>/etc/kernel/cmdline
+<div class="codehilite"><pre><span></span><code>nano /etc/kernel/cmdline
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="nv">GRUB_CMDLINE_LINUX_DEFAULT</span><span class="o">=</span><span class="s2">&quot;quiet iommu=pt initcall_blacklist=sysfb_init&quot;</span>
+<div class="codehilite"><pre><span></span><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet iommu=pt initcall_blacklist=sysfb_init&quot;
 </code></pre></div>
 
 <hr />
@@ -742,7 +742,7 @@ Your system might not be relying on Grub, but <strong>systemd</strong> instead
 </code></pre></div>
 
 <p>For <strong>Systemd</strong> only:</p>
-<div class="codehilite"><pre><span></span><code>pve-efiboot-tool<span class="w"> </span>refresh
+<div class="codehilite"><pre><span></span><code><span class="n">pve</span><span class="o">-</span><span class="n">efiboot</span><span class="o">-</span><span class="k">tool</span><span class="w"> </span><span class="n">refresh</span>
 </code></pre></div>
 
 <p>Reboot to commit changes with:</p>
@@ -753,11 +753,11 @@ Your system might not be relying on Grub, but <strong>systemd</strong> instead
 <h2 id="step-3-configuring-iommu">✍️ Step 3: Configuring IOMMU<a class="headerlink" href="#step-3-configuring-iommu" title="Permanent link">&para;</a></h2>
 <p>Once the host is up and running again we need to check if IOMMU is enabled and working. We can do this by running the following commands.</p>
 <p>For <strong>Intel</strong>:</p>
-<div class="codehilite"><pre><span></span><code>dmesg<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-e<span class="w"> </span>DMAR<span class="w"> </span>-e<span class="w"> </span>IOMMU
+<div class="codehilite"><pre><span></span><code>dmesg | grep -e DMAR -e IOMMU
 </code></pre></div>
 
 <p>For <strong>AMD</strong>:</p>
-<div class="codehilite"><pre><span></span><code>dmesg<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-e<span class="w"> </span>DMAR<span class="w"> </span>-e<span class="w"> </span>IOMMU<span class="w"> </span>-e<span class="w"> </span>AMD-Vi
+<div class="codehilite"><pre><span></span><code>dmesg | grep -e DMAR -e IOMMU -e AMD-Vi
 </code></pre></div>
 
 <p>If there's no output you've done something wrong, please retrace your steps:
@@ -765,51 +765,51 @@ You should be seeing something like this: "DMAR: IOMMU Enabled"</p>
 <hr />
 <p>The next step is enabling the modules required for GPU passthrough:
 Enable the necessary modules by running the following command:</p>
-<div class="codehilite"><pre><span></span><code>nano<span class="w"> </span>/etc/modules
+<div class="codehilite"><pre><span></span><code>nano /etc/modules
 </code></pre></div>
 
 <p>Add the following lines to this file:</p>
-<div class="codehilite"><pre><span></span><code>vfio
-vfio_iommu_type1
-vfio_pci
+<div class="codehilite"><pre><span></span><code><span class="nx">vfio</span>
+<span class="nx">vfio_iommu_type1</span>
+<span class="nx">vfio_pci</span>
 </code></pre></div>
 
 <p>Hit <strong>Ctrl</strong> + <strong>X</strong> &gt; <strong>Y</strong> <strong>Enter</strong> to Save changes.</p>
 <hr />
 <p>After changing the following modules you need to refresh your initramfs with the following command:</p>
-<div class="codehilite"><pre><span></span><code>update-initramfs<span class="w"> </span>-u<span class="w"> </span>-k<span class="w"> </span>all
+<div class="codehilite"><pre><span></span><code>update-initramfs -u -k all
 </code></pre></div>
 
 <p>Lets check if remapping has been enabled with the following command:</p>
-<div class="codehilite"><pre><span></span><code>dmesg<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>remapping
+<div class="codehilite"><pre><span></span><code>dmesg | grep remapping
 </code></pre></div>
 
 <p>You should see something like "Interrupt remapping enabled / IRQ Remapping Enabled"</p>
 <p>If your system doesn't support Remapping you can run this command to enable remapping. <strong>However please be aware that this option could make your system unstable.</strong></p>
-<div class="codehilite"><pre><span></span><code>nano<span class="w"> </span>/etc/modprobe.d/iommu_unsafe_interrupts.conf
+<div class="codehilite"><pre><span></span><code>nano /etc/modprobe.d/iommu_unsafe_interrupts.conf
 </code></pre></div>
 
 <p>Add the following line:</p>
-<div class="codehilite"><pre><span></span><code>options<span class="w"> </span>vfio_iommu_type1<span class="w"> </span><span class="nv">allow_unsafe_interrupts</span><span class="o">=</span><span class="m">1</span>
+<div class="codehilite"><pre><span></span><code><span class="nx">options</span><span class="w"> </span><span class="nx">vfio_iommu_type1</span><span class="w"> </span><span class="nx">allow_unsafe_interrupts</span><span class="p">=</span><span class="mi">1</span>
 </code></pre></div>
 
 <p>Hit <strong>Ctrl</strong> + <strong>X</strong> &gt; <strong>Y</strong> &gt; <strong>Enter</strong> to save your changes.</p>
 <hr />
 <h2 id="step-4-blacklisting-driver-modules">🚀 Step 4: Blacklisting Driver modules<a class="headerlink" href="#step-4-blacklisting-driver-modules" title="Permanent link">&para;</a></h2>
 <p>Blacklisting driver modules to give VM full access to Hardware.</p>
-<div class="codehilite"><pre><span></span><code>nano<span class="w"> </span>/etc/modprobe.d/pve-blacklist.conf<span class="w"> </span>
+<div class="codehilite"><pre><span></span><code>nano /etc/modprobe.d/pve-blacklist.conf 
 </code></pre></div>
 
 <p>Add:</p>
-<div class="codehilite"><pre><span></span><code>blacklist<span class="w"> </span>nouveau
-blacklist<span class="w"> </span>nvidia
-blacklist<span class="w"> </span>nvidiafb
-blacklist<span class="w"> </span>snd_hda_codec_hdmi
-blacklist<span class="w"> </span>snd_hda_intel
-blacklist<span class="w"> </span>snd_hda_codec
-blacklist<span class="w"> </span>snd_hda_core
-blacklist<span class="w"> </span>radeon
-blacklist<span class="w"> </span>amdgpu
+<div class="codehilite"><pre><span></span><code>blacklist nouveau
+blacklist nvidia
+blacklist nvidiafb
+blacklist snd_hda_codec_hdmi
+blacklist snd_hda_intel
+blacklist snd_hda_codec
+blacklist snd_hda_core
+blacklist radeon
+blacklist amdgpu
 </code></pre></div>
 
 <p>Hit <strong>Ctrl</strong> + <strong>X</strong> &gt; <strong>Y</strong> &gt; <strong>Enter</strong></p>
@@ -817,7 +817,7 @@ blacklist<span class="w"> </span>amdgpu
 <h4 id="adding-device-ids-to-blacklist">Adding Device ID's to Blacklist<a class="headerlink" href="#adding-device-ids-to-blacklist" title="Permanent link">&para;</a></h4>
 <p>To find the corresponding IDs for your PCI devices run the following command:
 <strong>Replace {device} = vga,usb,audio,wireless,sas etc.</strong></p>
-<div class="codehilite"><pre><span></span><code>lspci<span class="w"> </span>-nn<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span><span class="o">{</span>device<span class="o">}</span>
+<div class="codehilite"><pre><span></span><code>lspci -nn | grep -i {device}
 </code></pre></div>
 
 <p>You will see an output similar to the below screenshot:</p>
@@ -825,16 +825,16 @@ blacklist<span class="w"> </span>amdgpu
 <p>As you can see the IDs of the GPU above are <strong>10de:1287</strong> and <strong>1002:67d</strong>.</p>
 <p>You may decide you want to find the IDs of your USB controllers too just in case you need to whitelist these down the line due to issues.</p>
 <p>To blacklist the devices from use by Proxmox and full access use to your VM run the following commands.</p>
-<div class="codehilite"><pre><span></span><code>nano<span class="w"> </span>/etc/modprobe.d/vfio-pci.conf
+<div class="codehilite"><pre><span></span><code>nano /etc/modprobe.d/vfio-pci.conf
 </code></pre></div>
 
 <p>Add the device IDs in the blank file like this:</p>
-<div class="codehilite"><pre><span></span><code>options<span class="w"> </span>vfio-pci<span class="w"> </span><span class="nv">ids</span><span class="o">=</span><span class="m">1234</span>:5678,1234:5678<span class="w"> </span><span class="nv">disable_vga</span><span class="o">=</span><span class="m">1</span>
+<div class="codehilite"><pre><span></span><code>options vfio-pci ids=1234:5678,1234:5678 disable_vga=1
 </code></pre></div>
 
 <p>Replacing the <strong>1234:5678</strong> with your actual IDs, if you only have 1 GPU remove the other IDs from the command.</p>
 <p><em><strong>Example:</strong></em></p>
-<div class="codehilite"><pre><span></span><code>options<span class="w"> </span>vfio-pci<span class="w"> </span><span class="nv">ids</span><span class="o">=</span>10de:1287<span class="w"> </span><span class="nv">disable_vga</span><span class="o">=</span><span class="m">1</span>
+<div class="codehilite"><pre><span></span><code>options vfio-pci ids=10de:1287 disable_vga=1
 </code></pre></div>
 
 <p>You can also add <strong>disable_idle_d3=1</strong> to the end of the line to disable the D3 device power state which will prevent certain hardware from entering low power mode, which can cause issues when passed through to VMs.</p>
