@@ -57,6 +57,7 @@ plugins:
 
 markdown_extensions:
   - admonition       # ✅ Callouts/notes
+  - pymdownx.admonition
   - footnotes
   - codehilite:
       guess_lang: true
