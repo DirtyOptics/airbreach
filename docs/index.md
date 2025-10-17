@@ -2,20 +2,33 @@
 
 ## 🛠️ Technology Categories
 
-!!! info "Networking"
-    :material-server-network: **Master network configuration, routing, and infrastructure setup**
-    
+<div class="grid cards" markdown>
+
+-   :material-server-network:{ .lg .middle } **Networking**
+
+    ---
+
+    Master network configuration, routing, and infrastructure setup
+
     [:octicons-arrow-right-24: Explore Networking](networking/setup-nanostation.md)
 
-!!! info "Raspberry Pi"
-    :material-raspberry-pi: **Learn to configure and optimize Raspberry Pi systems**
-    
+-   :material-raspberry-pi:{ .lg .middle } **Raspberry Pi**
+
+    ---
+
+    Learn to configure and optimize Raspberry Pi systems
+
     [:octicons-arrow-right-24: Explore Raspberry Pi](raspberry-pi/enable-vnc.md)
 
-!!! info "Proxmox"
-    :material-server: **Virtualization and container management with Proxmox**
-    
+-   :material-server:{ .lg .middle } **Proxmox**
+
+    ---
+
+    Virtualization and container management with Proxmox
+
     [:octicons-arrow-right-24: Explore Proxmox](proxmox/PROXMOX-PCI%20Passthrough.md)
+
+</div>
 
 ---
 
@@ -71,23 +84,36 @@
 
 ## 📊 Learning Paths
 
-!!! success "Beginner"
-    :material-account-hard-hat: **New to IT infrastructure? Start here with fundamental concepts.**
-    
-    **Duration:** 2-4 weeks  
-    **Prerequisites:** Basic computer knowledge
+<div class="grid" markdown>
 
-!!! tip "Intermediate"
-    :material-cog: **Ready to dive deeper? Explore advanced configurations and optimizations.**
-    
-    **Duration:** 4-8 weeks  
-    **Prerequisites:** Basic networking knowledge
+:material-account-hard-hat: **Beginner**
 
-!!! warning "Advanced"
-    :material-rocket-launch: **Expert-level content for professionals and system architects.**
-    
-    **Duration:** 8+ weeks  
-    **Prerequisites:** Strong networking and virtualization background
+New to IT infrastructure? Start here with fundamental concepts.
+
+**Duration:** 2-4 weeks  
+**Prerequisites:** Basic computer knowledge
+
+{ .card }
+
+:material-cog: **Intermediate**
+
+Ready to dive deeper? Explore advanced configurations and optimizations.
+
+**Duration:** 4-8 weeks  
+**Prerequisites:** Basic networking knowledge
+
+{ .card }
+
+:material-rocket-launch: **Advanced**
+
+Expert-level content for professionals and system architects.
+
+**Duration:** 8+ weeks  
+**Prerequisites:** Strong networking and virtualization background
+
+{ .card }
+
+</div>
 
 ---
 
@@ -103,14 +129,27 @@
 
 ## 📈 Progress Tracking
 
-!!! success "Completed"
-    :material-check-circle: **Track your completed guides and certifications**
+<div class="grid" markdown>
 
-!!! info "In Progress"
-    :material-clock-outline: **Monitor your current learning journey**
+:material-check-circle: **Completed**
 
-!!! tip "Achievements"
-    :material-trophy: **Earn badges and recognition for your progress**
+Track your completed guides and certifications
+
+{ .card }
+
+:material-clock-outline: **In Progress**
+
+Monitor your current learning journey
+
+{ .card }
+
+:material-trophy: **Achievements**
+
+Earn badges and recognition for your progress
+
+{ .card }
+
+</div>
 
 ---
 
