@@ -1,25 +1,30 @@
-/* Custom navigation layout */
-.md-sidebar--primary {
-    order: 1;
+/* Force TOC to appear on the right side */
+.md-sidebar--secondary {
+    position: fixed !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: 20rem !important;
+    height: 100vh !important;
+    z-index: 10 !important;
 }
 
+/* Adjust main content to account for right sidebar */
 .md-content {
-    order: 2;
+    margin-right: 20rem !important;
 }
 
-.md-sidebar--secondary {
-    order: 3;
+/* Ensure left sidebar stays on the left */
+.md-sidebar--primary {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 20rem !important;
+    height: 100vh !important;
+    z-index: 10 !important;
 }
 
-/* Ensure proper spacing */
+/* Adjust main content to account for both sidebars */
 .md-main__inner {
-    display: flex;
-    flex-direction: row;
-}
-
-/* Make sure TOC appears on the right */
-.md-sidebar--secondary {
-    position: sticky;
-    top: 0;
-    height: fit-content;
+    margin-left: 20rem !important;
+    margin-right: 20rem !important;
 }
