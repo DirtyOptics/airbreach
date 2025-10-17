@@ -1,9 +1,0 @@
-/* Simple approach: just ensure TOC appears on the right */
-.md-sidebar--secondary {
-    display: block !important;
-}
-
-/* Make sure the TOC is visible */
-.md-nav--secondary {
-    display: block !important;
-}
