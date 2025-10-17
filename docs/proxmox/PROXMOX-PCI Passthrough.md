@@ -86,12 +86,12 @@ This step is not necessary for the passthrough, but helps keeping things clean.
 For ignoring some annoying “warnings” in your `dmesg` output, do the following:
 
 Open:
-```bash
+```
 nano /etc/modprobe.d/kvm.conf
 ```
 
 Add the following line:
-```bash
+```
 options kvm ignore_msrs=Y report_ignored_msrs=0
 ```
 
@@ -103,12 +103,12 @@ options kvm ignore_msrs=Y report_ignored_msrs=0
 
 For **GRUB**;  
 Replace the current similar line with this one in your grub file:
-```shell
+```
 nano /etc/default/grub
 ```
 
 Make these changes to that file:
-```shell
+```
 GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt initcall_blacklist=sysfb_init"
 ```
 
@@ -123,12 +123,12 @@ Hit **Ctrl + X → Y → Enter** to save changes.
 
 For **GRUB**;  
 Replace the current similar line with this one in your grub file:
-```shell
+```
 nano /etc/default/grub
 ```
 
 Make these changes to that file:
-```shell
+```
 GRUB_CMDLINE_LINUX_DEFAULT="quiet iommu=pt initcall_blacklist=sysfb_init"
 ```
 
@@ -141,39 +141,39 @@ Your system might not be relying on Grub, but **systemd** instead. This is oft
 
 #### Intel CPUs (Systemd/ZFS)
 
-```bash
+```
 nano /etc/kernel/cmdline
 ```
 
-```shell
+```
 root=ZFS=rpool/ROOT/pve-1 boot=zfs intel_iommu=on iommu=pt initcall_blacklist
 =sysfb_init
 ```
 
 #### AMD CPUs (Systemd/ZFS)
 
-```bash
+```
 nano /etc/kernel/cmdline
 ```
 
-```shell
+```
 GRUB_CMDLINE_LINUX_DEFAULT="quiet iommu=pt initcall_blacklist=sysfb_init"
 ```
 
 ---
 
 For **Grub** only:
-```shell
+```
 update-grub
 ```
 
 For **Systemd** only:
-```shell
+```
 pve-efiboot-tool refresh
 ```
 
 Reboot to commit changes with:
-```bash
+```
 reboot
 ```
 
@@ -184,12 +184,12 @@ reboot
 Once the host is up and running again we need to check if IOMMU is enabled and working. We can do this by running the following commands.
 
 For **Intel**:
-```shell
+```
 dmesg | grep -e DMAR -e IOMMU
 ```
 
 For **AMD**:
-```shell
+```
 dmesg | grep -e DMAR -e IOMMU -e AMD-Vi
 ```
 
@@ -201,12 +201,12 @@ You should be seeing something like this: "DMAR: IOMMU Enabled"
 The next step is enabling the modules required for GPU passthrough:
 Enable the necessary modules by running the following command:
 
-```shell
+```
 nano /etc/modules
 ```
 
 Add the following lines to this file:
-```shell
+```
 vfio
 vfio_iommu_type1
 vfio_pci
@@ -217,24 +217,24 @@ Hit **Ctrl** + **X** > **Y** **Enter** to Save changes.
 ---
 
 After changing the following modules you need to refresh your initramfs with the following command:
-```shell
+```
 update-initramfs -u -k all
 ```
 
 Lets check if remapping has been enabled with the following command:
-```shell
+```
 dmesg | grep remapping
 ```
 
 You should see something like "Interrupt remapping enabled / IRQ Remapping Enabled"
 
 If your system doesn't support Remapping you can run this command to enable remapping. **However please be aware that this option could make your system unstable.**
-```shell
+```
 nano /etc/modprobe.d/iommu_unsafe_interrupts.conf
 ```
 
 Add the following line:
-```shell
+```
 options vfio_iommu_type1 allow_unsafe_interrupts=1
 ```
 
@@ -245,12 +245,12 @@ Hit **Ctrl** + **X** > **Y** > **Enter** to save your changes.
 ## 🚀 Step 4: Blacklisting Driver modules
 
 Blacklisting driver modules to give VM full access to Hardware.
-```shell
+```
 nano /etc/modprobe.d/pve-blacklist.conf 
 ```
 
 Add:
-```shell
+```
 blacklist nouveau
 blacklist nvidia
 blacklist nvidiafb
@@ -270,7 +270,7 @@ Hit **Ctrl** + **X** > **Y** > **Enter**
 
 To find the corresponding IDs for your PCI devices run the following command:
 **Replace {device} = vga,usb,audio,wireless,sas etc.**
-```shell
+```
 lspci -nn | grep -i {device}
 ```
 
@@ -284,19 +284,19 @@ You may decide you want to find the IDs of your USB controllers too just in case
 
 To blacklist the devices from use by Proxmox and full access use to your VM run the following commands.
 
-```shell
+```
 nano /etc/modprobe.d/vfio-pci.conf
 ```
 
 Add the device IDs in the blank file like this:
-```shell
+```
 options vfio-pci ids=1234:5678,1234:5678 disable_vga=1
 ```
 
 Replacing the **1234:5678** with your actual IDs, if you only have 1 GPU remove the other IDs from the command.
 
 _**Example:**_
-```shell
+```
 options vfio-pci ids=10de:1287 disable_vga=1
 ```
 
@@ -305,7 +305,7 @@ You can also add **disable_idle_d3=1** to the end of the line to disable the D
 Hit **Ctrl** + **X** > **Y** > **Enter** to save changes.
 
 Once all of the above is sorted reboot your machine once again with the command below:
-```shell
+```
 reboot
 ```
 

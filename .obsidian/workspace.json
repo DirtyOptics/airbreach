@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "0bb6484ba7941d38",
+        "id": "fbc72a498fa00872",
         "type": "tabs",
         "children": [
           {
-            "id": "5eef394a64f4f606",
+            "id": "41b862ac8be3927b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "docs/proxmox/PROXMOX-PCI Passthrough.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "PROXMOX-PCI Passthrough"
             }
           }
         ]
@@ -166,17 +170,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5eef394a64f4f606",
+  "active": "41b862ac8be3927b",
   "lastOpenFiles": [
-    "docs/proxmox/PROXMOX -  PCI Passthrough.md",
     "docs/proxmox/PROXMOX-PCI Passthrough.md",
+    "docs/networking/setup-nanostation.md",
+    "docs/proxmox/PROXMOX -  PCI Passthrough.md",
     "Raspberry Pi/This is a test.md",
     "docs",
     "docs/raspberry-pi/enable-vnc.md",
     "docs/index.md",
     "This is a test.md",
-    "docs/networking/setup-nanostation.md",
-    "docs/networking/setup-nanostation.md",
     "Welcome.md",
     "docs/raspberry-pi",
     "docs/networking",
