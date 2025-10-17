@@ -92,9 +92,7 @@ For ignoring some annoying “warnings” in your `dmesg` output, do the follo
 <strong>⚠️ Attention:</strong> This step is not necessary for the passthrough, but helps keeping things clean. For ignoring some annoying "warnings" in your dmesg output, do the following:
 </div>
 
-!!! attention "Attention"
-
-This step is not necessary for the passthrough, but helps keeping things clean. For ignoring some annoying "warnings" in your dmesg output, do the following:
+!!! attention "Attention" This step is not necessary!
 
 
 ```ad-tip
