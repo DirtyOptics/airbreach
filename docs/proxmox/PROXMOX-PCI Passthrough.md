@@ -81,10 +81,6 @@ _If your CPU has an iGPU, if not skip this._
 ✅ **Set Pre-Allocated Memory to 64M**  
 _If your CPU has an iGPU, if not skip this too._
 
-> [!ATTENTION]
-This step is not necessary for the passthrough, but helps keeping things clean.
-For ignoring some annoying “warnings” in your `dmesg` output, do the following:
-
 !!! attention "<strong>Attention</strong> - This step is not necessary for the pass-through, but helps keeping things clean.  For ignoring some annoying “warnings” in your `dmesg` output, do the following:"
 
 Open:
@@ -114,9 +110,8 @@ Make these changes to that file:
 GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt initcall_blacklist=sysfb_init"
 ```
 
-> [!ATTENTION]
-This config is from a youtube video which seemed to work and display "IOMMU Enabled" when checking as well.
-```GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt intel_pstate=disable```
+!!! attention "<strong>Attention</strong> - This config is from a youtube video which seemed to work and display "IOMMU Enabled" when checking as well.
+```GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt intel_pstate=disable```"
 
 Hit **Ctrl + X → Y → Enter** to save changes.
 
@@ -138,8 +133,7 @@ Hit **Ctrl + X → Y → Enter** to save changes.
 
 ---
 
-> [!ATTENTION]
-Your system might not be relying on Grub, but **systemd** instead. This is often the case when you’re using **ZFS**.  So for **systemd**:
+!!! attention "<strong>Attention</strong> - Your system might not be relying on Grub, but **systemd** instead. This is often the case when you’re using **ZFS**. So for **systemd**:"
 
 #### Intel CPUs (Systemd/ZFS)
 
