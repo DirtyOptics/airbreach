@@ -84,7 +84,6 @@ markdown_extensions:
   - toc:
       permalink: true
       title: On this page
-      level: 2
   - tables
   - pymdownx.tasklist:
       custom_checkbox: true
