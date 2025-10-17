@@ -46,4 +46,6 @@ nav:
       - Setup Nanostation: networking/setup-nanostation.md
   - Raspberry Pi:
       - Enable VNC: raspberry-pi/enable-vnc.md
+  - Proxmox:
+    - PCI Passthrough: proxmox/PROXMOX -  PCI Passthrough.md
 
