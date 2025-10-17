@@ -97,6 +97,14 @@ For ignoring some annoying “warnings” in your `dmesg` output, do the follo
 This step is not necessary for the passthrough, but helps keeping things clean. For ignoring some annoying "warnings" in your dmesg output, do the following:
 
 
+```ad-tip
+title: This is a tip
+
+This is the content of the admonition tip.
+```
+
+
+
 Open:
 ```
 nano /etc/modprobe.d/kvm.conf
