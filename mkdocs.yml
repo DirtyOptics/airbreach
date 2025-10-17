@@ -10,36 +10,80 @@ theme:
   features:
     - navigation.tabs
     - navigation.sections
+    - navigation.top
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
     - content.code.annotate
     - content.code.copy
+    - content.code.select
     - search.suggest
     - search.highlight
+    - search.share
+    - toc.follow
     - toc.integrate
+    - content.action.edit
+    - content.action.view
   palette:
     - scheme: default
       primary: indigo
       accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
     - scheme: slate
       primary: indigo
       accent: indigo
       toggle:
         icon: material/weather-night
-        name: Switch to dark mode
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
 
 plugins:
-  - search
-  - minify
-#  - git-revision-date-localized  # Uncomment if you want last updated dates
+  - search:
+      lang: en
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      enable_modification_date: true
+      type: timeago
 
 markdown_extensions:
   - admonition       # ✅ Callouts/notes
   - footnotes
-  - codehilite
+  - codehilite:
+      guess_lang: true
+      use_pygments: true
   - attr_list
   - def_list
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - toc:
       permalink: true
+      title: On this page
   - tables
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 nav:
   - Home: index.md
