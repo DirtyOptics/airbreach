@@ -110,8 +110,10 @@ Make these changes to that file:
 GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt initcall_blacklist=sysfb_init"
 ```
 
-!!! attention "<strong>Attention</strong> - This config is from a youtube video which seemed to work and display "IOMMU Enabled" when checking as well.
-```GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt intel_pstate=disable```"
+!!! attention "Attention - This config is from a youtube video which seemed to work and display 'IOMMU Enabled' when checking as well:"
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt intel_pstate=disable
+```
 
 Hit **Ctrl + X → Y → Enter** to save changes.
 
