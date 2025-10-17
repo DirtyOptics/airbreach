@@ -85,6 +85,18 @@ _If your CPU has an iGPU, if not skip this too._
 This step is not necessary for the passthrough, but helps keeping things clean.
 For ignoring some annoying “warnings” in your `dmesg` output, do the following:
 
+**⚠️ Attention:** This step is not necessary for the passthrough, but helps keeping things clean.  
+For ignoring some annoying “warnings” in your `dmesg` output, do the following:
+
+<div class="admonition attention">
+<strong>⚠️ Attention:</strong> This step is not necessary for the passthrough, but helps keeping things clean. For ignoring some annoying "warnings" in your dmesg output, do the following:
+</div>
+
+!!! attention "Attention"
+
+This step is not necessary for the passthrough, but helps keeping things clean. For ignoring some annoying "warnings" in your dmesg output, do the following:
+
+
 Open:
 ```
 nano /etc/modprobe.d/kvm.conf
