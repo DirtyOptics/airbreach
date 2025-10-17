@@ -11,10 +11,14 @@
             "id": "5eef394a64f4f606",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "docs/proxmox/PROXMOX -  PCI Passthrough.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "PROXMOX -  PCI Passthrough"
             }
           }
         ]
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 270.5
   },
   "right": {
     "id": "bc386b967dba89ea",
@@ -166,7 +170,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5eef394a64f4f606",
+  "active": "5f6cce7e5054fb3e",
   "lastOpenFiles": [
     "Raspberry Pi/This is a test.md",
     "docs",
