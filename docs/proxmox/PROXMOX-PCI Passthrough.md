@@ -1,8 +1,6 @@
 # 🛠️ How To: Proxmox PCI/GPU Passthrough
 
-👤 <strong>Author:</strong> Dwayne Black  
-📅 <strong>Date:</strong> 16 Oct 25  
-📌 <strong>Version:</strong> 01.2025
+👤 <strong>Author:</strong> Dwayne Black  📅 <strong>Date:</strong> 16 Oct 25  📌 <strong>Version:</strong> 01.2025
 
 ---
 
@@ -13,22 +11,6 @@ PCI passthrough allows you to use a physical PCI device (graphics card, network 
 If you "PCI passthrough" a device, the device is not available to the host anymore. Note that VMs with passed-through devices cannot be migrated.
 
 Good for Gfx cards passthrough direct to Plex/Jellyfin VM for transcoding etc.
-
----
-
-## 📑 Table of Contents
-
-- [📖 Overview](#-overview)
-- [📋 Prerequisites](#-prerequisites)
-- [🧩 Step-by-Step Guide](#-step-by-step-guide)
-  - [🔧 Step 1: {{Prepare BIOS}}](#-step-1-prepare-bios)
-  - [🔧 Step 2: {{Step Title}}](#-step-2-step-title)
-  - [🔧 Step 3: {{Step Title}}](#-step-3-step-title)
-  -  [🔧 Step 4: {{Step Title}}](#-step-3-step-title)
-- [❗ Troubleshooting](#-troubleshooting)
-- [📚 Resources](#-resources)
-- [🔄 Revision History](#-revision-history)
-- [📝 Additional Notes](#-additional-notes)
 
 ---
 
@@ -46,10 +28,8 @@ Good for Gfx cards passthrough direct to Plex/Jellyfin VM for transcoding etc.
 
 ## 🧩 Step-by-Step Guide
 
-## Step 1: Prepare BIOS
+### Step 1: Prepare BIOS
 This prep is required to ensure that your system is compatible with 'passthrough' and you have the best chance of success. if possible, **start by ensuring your BIOS firmware is up to date!**
-
-#### ▶️ BIOS Enable/Disable:
 
 ✅ **Enable SVM/Virtualization Mode**
 
@@ -95,7 +75,7 @@ options kvm ignore_msrs=Y report_ignored_msrs=0
 
 ---
 
-## 🔧 Step 2: Setting the Boot Arguments
+### 🔧 Step 2: Setting Boot Arguments
 
 #### For **Intel** CPUs
 
@@ -177,7 +157,7 @@ reboot
 
 ---
 
-## ✍️ Step 3: Configuring IOMMU
+### ✍️ Step 3: Configuring IOMMU
 
 Once the host is up and running again we need to check if IOMMU is enabled and working. We can do this by running the following commands.
 
@@ -240,7 +220,7 @@ Hit **Ctrl** + **X** > **Y** > **Enter** to save your changes.
 
 ---
 
-## 🚀 Step 4: Blacklisting Driver modules
+### 🚀 Step 4: Blacklisting Driver modules
 
 Blacklisting driver modules to give VM full access to Hardware.
 ```
@@ -309,7 +289,7 @@ reboot
 
 ---
 
-## ⏳ Step 4: Adding devices to you VM
+### ⏳ Step 4: Adding devices to VM
 
 
 (Coming Soon!)
