@@ -1,6 +1,8 @@
 # 🛠️ How To: Proxmox PCI/GPU Passthrough
 
-👤 <strong>Author:</strong> Dwayne Black  📅 <strong>Date:</strong> 16 Oct 25  📌 <strong>Version:</strong> 01.2025
+👤 <strong>Author:</strong> Dwayne Black  
+📅 <strong>Date:</strong> 16 Oct 25  
+📌 <strong>Version:</strong> 01.2025
 
 ---
 
