@@ -177,5 +177,6 @@ hide:
     - **Network Security**: Advanced firewall rules and monitoring
 
 ---
+++ctrl+alt+del++
 
 *Built with ❤️ using MkDocs Material*
