@@ -30,7 +30,7 @@ Good for Gfx cards passthrough direct to Plex/Jellyfin VM for transcoding etc.
 
 ## 🧩 Step-by-Step Guide
 
-### Step 1: Prepare BIOS
+### 🎯 Step 1: Prepare BIOS
 This prep is required to ensure that your system is compatible with 'passthrough' and you have the best chance of success. if possible, **start by ensuring your BIOS firmware is up to date!**
 
 ✅ **Enable SVM/Virtualization Mode**
