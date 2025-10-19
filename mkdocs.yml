@@ -9,11 +9,10 @@ theme:
   name: material
   features:
     - navigation.tabs
-    - navigation.sections
     - navigation.top
     - navigation.expand
     - navigation.path
-    - navigation.indexes
+    - navigation.sections
     - content.code.annotate
     - content.code.copy
     - content.code.select
@@ -21,7 +20,6 @@ theme:
     - search.highlight
     - search.share
     - toc.follow
-    - toc.integrate
     - content.action.edit
     - content.action.view
   palette:
@@ -46,15 +44,17 @@ theme:
     view: material/eye
 
 
-# Navigation configuration
 nav:
   - Home: index.md
   - Networking:
       - Setup Nanostation: networking/setup-nanostation.md
+      - Advanced Routing: networking/advanced-routing.md
   - Raspberry Pi:
       - Enable VNC: raspberry-pi/enable-vnc.md
+      - Performance Tuning: raspberry-pi/performance-tuning.md
   - Proxmox:
     - PCI Passthrough: proxmox/PROXMOX-PCI Passthrough.md
+    - Backup and Restore: proxmox/backup-restore.md
 
 # Table of contents configuration
 markdown_extensions:
@@ -83,7 +83,6 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - toc:
       permalink: true
-      title: On this page
   - tables
   - pymdownx.tasklist:
       custom_checkbox: true
