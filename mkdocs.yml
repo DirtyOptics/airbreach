@@ -52,6 +52,7 @@ nav:
   - Raspberry Pi:
       - Enable VNC: raspberry-pi/enable-vnc.md
       - Performance Tuning: raspberry-pi/performance-tuning.md
+      - RPi5 Setup: raspberry-pi/rpi5-setup.md
   - Proxmox:
     - PCI Passthrough: proxmox/PROXMOX-PCI Passthrough.md
     - Backup and Restore: proxmox/backup-restore.md
