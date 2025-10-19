@@ -6,7 +6,7 @@
 
 ---
 
-# 📖 Overview
+## 📖 Overview
 
 PCI passthrough allows you to use a physical PCI device (graphics card, network card) inside a VM (KVM virtualization only).
 
@@ -16,7 +16,7 @@ Good for Gfx cards passthrough direct to Plex/Jellyfin VM for transcoding etc.
 
 ---
 
-# 📑 Table of Contents
+## 📑 Table of Contents
 
 - [📖 Overview](#-overview)
 - [📋 Prerequisites](#-prerequisites)
@@ -32,7 +32,7 @@ Good for Gfx cards passthrough direct to Plex/Jellyfin VM for transcoding etc.
 
 ---
 
-# 📋 Prerequisites
+## 📋 Prerequisites
 
 | 📦 Item         | 📖 Description                                                                                                              | 🔢 Version |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------- | ---------- |
@@ -44,7 +44,7 @@ Good for Gfx cards passthrough direct to Plex/Jellyfin VM for transcoding etc.
 
 ---
 
-# 🧩 Step-by-Step Guide
+## 🧩 Step-by-Step Guide
 
 ## Step 1: Prepare BIOS
 This prep is required to ensure that your system is compatible with 'passthrough' and you have the best chance of success. if possible, **start by ensuring your BIOS firmware is up to date!**
