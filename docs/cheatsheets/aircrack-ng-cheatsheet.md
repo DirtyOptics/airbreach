@@ -9,7 +9,7 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Basic Setup"
 
-    ### **Standard Monitor Mode**
+    #### **Standard Monitor Mode**
     
     **Check available interfaces:**
     ```bash
@@ -33,7 +33,7 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Check Kill Method"
 
-    ### **Check Kill Setup**
+    #### **Check Kill Setup**
     
     **Kill interfering processes:**
     ```bash
@@ -57,7 +57,7 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Manual Setup"
 
-    ### **Manual Monitor Mode**
+    #### **Manual Monitor Mode**
     
     **Bring interface down:**
     ```bash
@@ -90,7 +90,7 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Basic Scanning"
 
-    ### **Basic AP Scan**
+    #### **Basic AP Scan**
     
     **Scan all channels:**
     ```bash
@@ -114,7 +114,7 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Target Specific"
 
-    ### **Target Specific Networks**
+    #### **Target Specific Networks**
     
     **Target by BSSID:**
     ```bash
@@ -138,7 +138,7 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Advanced Filtering"
 
-    ### **Advanced Filtering**
+    #### **Advanced Filtering**
     
     **Filter by encryption:**
     ```bash
@@ -166,7 +166,7 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Passive Capture"
 
-    ### **Passive Capture**
+    #### **Passive Capture**
     
     **Start capture:**
     ```bash
@@ -181,7 +181,7 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Active Deauth"
 
-    ### **Active Deauth Attack**
+    #### **Active Deauth Attack**
     
     **Terminal 1 - Capture handshake:**
     ```bash
@@ -205,7 +205,7 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Fake AP Attack"
 
-    ### **Fake AP Attack**
+    #### **Fake AP Attack**
     
     **Create fake AP:**
     ```bash
@@ -228,7 +228,7 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Dictionary Attack"
 
-    ### **Dictionary Attack**
+    #### **Dictionary Attack**
     
     **Basic dictionary attack:**
     ```bash
@@ -252,7 +252,7 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Brute Force Attack"
 
-    ### **Brute Force Attack**
+    #### **Brute Force Attack**
     
     **4-way handshake brute force:**
     ```bash
@@ -271,7 +271,7 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Hashcat Integration"
 
-    ### **Hashcat Integration**
+    #### **Hashcat Integration**
     
     **Convert cap to hccapx:**
     ```bash
