@@ -327,7 +327,3 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 - [Aircrack-ng Official Documentation](https://www.aircrack-ng.org/)
 - [Kali Linux Wireless Testing](https://www.kali.org/tools/aircrack-ng/)
 - [Wireless Security Best Practices](https://www.wi-fi.org/security)
-
----
-
-*This cheatsheet covers the most common Aircrack-ng scenarios. Always ensure you have proper authorization before testing.*
