@@ -67,6 +67,18 @@ sudo aircrack-ng -w /usr/share/wordlists/rockyou.txt -b AA:BB:CC:DD:EE:FF captur
 | ++ctrl+w++ | **Write** | Write to file |
 | ++ctrl+x++ | **Export** | Export data |
 
+### **Color Coding Shortcuts**
+| Key | Action | Description |
+|-----|--------|-------------|
+| ++ctrl+1++ | **Red** | Highlight in red |
+| ++ctrl+2++ | **Green** | Highlight in green |
+| ++ctrl+3++ | **Yellow** | Highlight in yellow |
+| ++ctrl+4++ | **Blue** | Highlight in blue |
+| ++ctrl+5++ | **Magenta** | Highlight in magenta |
+| ++ctrl+6++ | **Cyan** | Highlight in cyan |
+| ++ctrl+7++ | **White** | Highlight in white |
+| ++ctrl+0++ | **Clear** | Remove color highlighting |
+
 ### **Sorting Options** (++ctrl+s++)
 - **PWR** - Signal strength
 - **Beacons** - Number of beacons
@@ -85,6 +97,24 @@ sudo aircrack-ng -w /usr/share/wordlists/rockyou.txt -b AA:BB:CC:DD:EE:FF captur
 | ++ctrl+m++ | **Mark AP** | Mark AP for targeting |
 | ++ctrl+t++ | **Set Target** | Set as primary target |
 | ++ctrl+u++ | **Update** | Refresh display |
+
+### **Color Coding Strategy**
+| Color | Use Case | Description |
+|-------|----------|-------------|
+| **Red** | High Priority | Target APs, WEP networks, weak encryption |
+| **Green** | Connected | APs with active clients |
+| **Yellow** | WPS Enabled | APs with WPS vulnerability |
+| **Blue** | Strong Signal | High-power APs for testing |
+| **Magenta** | Hidden SSID | Networks with hidden names |
+| **Cyan** | 5GHz Networks | Higher frequency targets |
+| **White** | Unknown/New | Recently discovered APs |
+
+!!! tip "Color Coding Best Practices"
+    - **Red**: Mark your primary targets
+    - **Green**: Highlight APs with active clients
+    - **Yellow**: Flag WPS-enabled networks
+    - **Blue**: Mark high-signal strength APs
+    - Use ++ctrl+0++ to clear colors and start fresh
 
 ---
 
