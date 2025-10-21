@@ -47,7 +47,7 @@ theme:
 nav:
   - Home: index.md
   - Cheatsheets:
-      - Image Reference: image-cheatsheet.md
+      - Image Reference: Cheatsheets/image-cheatsheet.md
   - Networking:
       - Setup Nanostation: networking/setup-nanostation.md
       - Advanced Routing: networking/advanced-routing.md
