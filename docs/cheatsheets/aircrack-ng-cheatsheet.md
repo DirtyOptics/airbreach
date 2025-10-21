@@ -245,50 +245,56 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 ## ⌨️ Airodump-ng Keyboard Shortcuts
 
-### **Main Screen Navigation**
-| Key | Action | Description |
-|-----|--------|-------------|
-| ++ctrl+c++ | **Exit** | Stop scanning and exit |
-| ++ctrl+s++ | **Sort** | Cycle through sort options |
-| ++ctrl+r++ | **Reset** | Reset statistics |
-| ++ctrl+a++ | **AP List** | Toggle AP list view |
-| ++ctrl+c++ | **Client List** | Toggle client list view |
-| ++ctrl+f++ | **Filter** | Set MAC address filter |
-| ++ctrl+m++ | **Mark** | Mark/Unmark AP for targeting |
-| ++ctrl+t++ | **Target** | Set target AP |
-| ++ctrl+u++ | **Update** | Update display |
-| ++ctrl+w++ | **Write** | Write to file |
-| ++ctrl+x++ | **Export** | Export data |
+=== "Navigation Shortcuts"
 
-### **Color Coding Shortcuts**
-| Key | Action | Description |
-|-----|--------|-------------|
-| ++ctrl+1++ | **Red** | Highlight in red |
-| ++ctrl+2++ | **Green** | Highlight in green |
-| ++ctrl+3++ | **Yellow** | Highlight in yellow |
-| ++ctrl+4++ | **Blue** | Highlight in blue |
-| ++ctrl+5++ | **Magenta** | Highlight in magenta |
-| ++ctrl+6++ | **Cyan** | Highlight in cyan |
-| ++ctrl+7++ | **White** | Highlight in white |
-| ++ctrl+0++ | **Clear** | Remove color highlighting |
+    ### **Main Screen Navigation**
+    | Key | Action | Description |
+    |-----|--------|-------------|
+    | ++ctrl+c++ | **Exit** | Stop scanning and exit |
+    | ++ctrl+s++ | **Sort** | Cycle through sort options |
+    | ++ctrl+r++ | **Reset** | Reset statistics |
+    | ++ctrl+a++ | **AP List** | Toggle AP list view |
+    | ++ctrl+c++ | **Client List** | Toggle client list view |
+    | ++ctrl+f++ | **Filter** | Set MAC address filter |
+    | ++ctrl+m++ | **Mark** | Mark/Unmark AP for targeting |
+    | ++ctrl+t++ | **Target** | Set target AP |
+    | ++ctrl+u++ | **Update** | Update display |
+    | ++ctrl+w++ | **Write** | Write to file |
+    | ++ctrl+x++ | **Export** | Export data |
 
-### **Color Coding Strategy**
-| Color | Use Case | Description |
-|-------|----------|-------------|
-| **Red** | High Priority | Target APs, WEP networks, weak encryption |
-| **Green** | Connected | APs with active clients |
-| **Yellow** | WPS Enabled | APs with WPS vulnerability |
-| **Blue** | Strong Signal | High-power APs for testing |
-| **Magenta** | Hidden SSID | Networks with hidden names |
-| **Cyan** | 5GHz Networks | Higher frequency targets |
-| **White** | Unknown/New | Recently discovered APs |
+=== "Color Shortcuts"
 
-!!! tip "Color Coding Best Practices"
-    - **Red**: Mark your primary targets
-    - **Green**: Highlight APs with active clients
-    - **Yellow**: Flag WPS-enabled networks
-    - **Blue**: Mark high-signal strength APs
-    - Use ++ctrl+0++ to clear colors and start fresh
+    ### **Color Coding Shortcuts**
+    | Key | Action | Description |
+    |-----|--------|-------------|
+    | ++ctrl+1++ | **Red** | Highlight in red |
+    | ++ctrl+2++ | **Green** | Highlight in green |
+    | ++ctrl+3++ | **Yellow** | Highlight in yellow |
+    | ++ctrl+4++ | **Blue** | Highlight in blue |
+    | ++ctrl+5++ | **Magenta** | Highlight in magenta |
+    | ++ctrl+6++ | **Cyan** | Highlight in cyan |
+    | ++ctrl+7++ | **White** | Highlight in white |
+    | ++ctrl+0++ | **Clear** | Remove color highlighting |
+
+=== "Color Strategy"
+
+    ### **Color Coding Strategy**
+    | Color | Use Case | Description |
+    |-------|----------|-------------|
+    | **Red** | High Priority | Target APs, WEP networks, weak encryption |
+    | **Green** | Connected | APs with active clients |
+    | **Yellow** | WPS Enabled | APs with WPS vulnerability |
+    | **Blue** | Strong Signal | High-power APs for testing |
+    | **Magenta** | Hidden SSID | Networks with hidden names |
+    | **Cyan** | 5GHz Networks | Higher frequency targets |
+    | **White** | Unknown/New | Recently discovered APs |
+
+    !!! tip "Color Coding Best Practices"
+        - **Red**: Mark your primary targets
+        - **Green**: Highlight APs with active clients
+        - **Yellow**: Flag WPS-enabled networks
+        - **Blue**: Mark high-signal strength APs
+        - Use ++ctrl+0++ to clear colors and start fresh
 
 ---
 
