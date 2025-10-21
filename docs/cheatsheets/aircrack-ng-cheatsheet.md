@@ -2,11 +2,6 @@
 
 A comprehensive reference for wireless security testing with the Aircrack-ng suite.
 
----
-
-## 🚀 Aircrack-ng Workflow
-
-The complete process from setup to cracking in 4 main steps.
 
 ---
 
