@@ -262,11 +262,12 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
     | ++ctrl+w++ | **Write** | Write to file |
     | ++ctrl+x++ | **Export** | Export data |
 
-=== "Color Shortcuts"
+=== "Colour Shortcuts"
 
-    ### **Color Coding Shortcuts**
+    ### **Colour Coding Shortcuts**
     | Key | Action | Description |
     |-----|--------|-------------|
+    | ++ctrl+m++ | **Mark** | Mark/Unmark AP for targeting |
     | ++ctrl+1++ | **Red** | Highlight in red |
     | ++ctrl+2++ | **Green** | Highlight in green |
     | ++ctrl+3++ | **Yellow** | Highlight in yellow |
@@ -274,27 +275,16 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
     | ++ctrl+5++ | **Magenta** | Highlight in magenta |
     | ++ctrl+6++ | **Cyan** | Highlight in cyan |
     | ++ctrl+7++ | **White** | Highlight in white |
-    | ++ctrl+0++ | **Clear** | Remove color highlighting |
+    | ++ctrl+0++ | **Clear** | Remove colour highlighting |
 
-=== "Color Strategy"
-
-    ### **Color Coding Strategy**
-    | Color | Use Case | Description |
-    |-------|----------|-------------|
-    | **Red** | High Priority | Target APs, WEP networks, weak encryption |
-    | **Green** | Connected | APs with active clients |
-    | **Yellow** | WPS Enabled | APs with WPS vulnerability |
-    | **Blue** | Strong Signal | High-power APs for testing |
-    | **Magenta** | Hidden SSID | Networks with hidden names |
-    | **Cyan** | 5GHz Networks | Higher frequency targets |
-    | **White** | Unknown/New | Recently discovered APs |
-
-    !!! tip "Color Coding Best Practices"
-        - **Red**: Mark your primary targets
-        - **Green**: Highlight APs with active clients
-        - **Yellow**: Flag WPS-enabled networks
-        - **Blue**: Mark high-signal strength APs
-        - Use ++ctrl+0++ to clear colors and start fresh
+    !!! tip "Colour Coding Strategy"
+        - **Red**: High priority targets, WEP networks
+        - **Green**: APs with active clients
+        - **Yellow**: WPS-enabled networks
+        - **Blue**: High-signal strength APs
+        - **Magenta**: Hidden SSID networks
+        - **Cyan**: 5GHz networks
+        - **White**: Recently discovered APs
 
 ---
 
