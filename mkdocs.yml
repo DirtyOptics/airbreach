@@ -46,6 +46,8 @@ theme:
 
 nav:
   - Home: index.md
+  - Cheatsheets:
+      - Image Reference: image-cheatsheet.md
   - Networking:
       - Setup Nanostation: networking/setup-nanostation.md
       - Advanced Routing: networking/advanced-routing.md
@@ -64,9 +66,10 @@ markdown_extensions:
   - codehilite:
       guess_lang: true
       use_pygments: true
-  - attr_list
+  - attr_list        # ✅ Image alignment
   - def_list
-  - md_in_html
+  - md_in_html       # ✅ Image captions
+  - pymdownx.blocks.caption  # ✅ Image captions
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -88,12 +91,14 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 
-
 plugins:
   - search:
       lang: en
   - minify:
       minify_html: true
+  - glightbox:
+      touchNavigation: true
+      loop: false
 #  - git-revision-date-localized:
 #      enable_creation_date: true
 #      enable_modification_date: true
