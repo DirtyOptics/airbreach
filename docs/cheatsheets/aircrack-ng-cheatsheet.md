@@ -10,14 +10,19 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 === "Basic Setup"
 
     ### **Method 1: Standard Monitor Mode**
+    
+    **Check available interfaces:**
     ```bash
-    # Check available interfaces
     iwconfig
+    ```
 
-    # Enable monitor mode
+    **Enable monitor mode:**
+    ```bash
     sudo airmon-ng start wlan0
+    ```
 
-    # Verify monitor mode
+    **Verify monitor mode:**
+    ```bash
     iwconfig
     ```
 
@@ -29,14 +34,19 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 === "Check Kill Method"
 
     ### **Method 2: Check Kill Setup**
+    
+    **Kill interfering processes:**
     ```bash
-    # Kill interfering processes
     sudo airmon-ng check kill
+    ```
 
-    # Start monitor mode
+    **Start monitor mode:**
+    ```bash
     sudo airmon-ng start wlan0
+    ```
 
-    # Verify interface
+    **Verify interface:**
+    ```bash
     iwconfig
     ```
 
@@ -48,17 +58,24 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 === "Manual Setup"
 
     ### **Method 3: Manual Monitor Mode**
+    
+    **Bring interface down:**
     ```bash
-    # Bring interface down
     sudo ifconfig wlan0 down
+    ```
 
-    # Set monitor mode
+    **Set monitor mode:**
+    ```bash
     sudo iwconfig wlan0 mode monitor
+    ```
 
-    # Bring interface up
+    **Bring interface up:**
+    ```bash
     sudo ifconfig wlan0 up
+    ```
 
-    # Verify mode
+    **Verify mode:**
+    ```bash
     iwconfig
     ```
 
