@@ -8,8 +8,6 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 ## 🔧 Monitor Mode Setup
 
 === "Basic Setup"
-
-    #### **Standard Monitor Mode**
     
     **Check available interfaces:**
     ```bash
@@ -32,8 +30,6 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
         - **Best for**: Dedicated testing machines
 
 === "Check Kill Method"
-
-    #### **Check Kill Setup**
     
     **Kill interfering processes:**
     ```bash
@@ -56,8 +52,6 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
         - **Best for**: Systems with network conflicts
 
 === "Manual Setup"
-
-    #### **Manual Monitor Mode**
     
     **Bring interface down:**
     ```bash
