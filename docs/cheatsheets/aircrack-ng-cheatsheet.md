@@ -310,7 +310,7 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 ---
 
-## 📚 Abbreviations Reference
+## 📚 Terminology Reference
 
 | Abbreviation | Full Term | Description |
 |--------------|-----------|-------------|
