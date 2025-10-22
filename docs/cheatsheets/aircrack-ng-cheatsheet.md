@@ -84,8 +84,6 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Basic Scanning"
 
-    #### **Basic AP Scan**
-    
     **Scan all channels:**
     ```bash
     sudo airodump-ng wlan0mon
@@ -108,8 +106,6 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Target Specific"
 
-    #### **Target Specific Networks**
-    
     **Target by BSSID:**
     ```bash
     sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF wlan0mon
@@ -132,8 +128,6 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Advanced Filtering"
 
-    #### **Advanced Filtering**
-    
     **Filter by encryption:**
     ```bash
     sudo airodump-ng --encrypt WPA wlan0mon
@@ -160,8 +154,6 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Passive Capture"
 
-    #### **Passive Capture**
-    
     **Start capture:**
     ```bash
     sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w handshake wlan0mon
@@ -175,8 +167,6 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Active Deauth"
 
-    #### **Active Deauth Attack**
-    
     **Terminal 1 - Capture handshake:**
     ```bash
     sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w handshake wlan0mon
@@ -199,8 +189,6 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Fake AP Attack"
 
-    #### **Fake AP Attack**
-    
     **Create fake AP:**
     ```bash
     sudo airbase-ng -a AA:BB:CC:DD:EE:FF --essid "FreeWiFi" wlan0mon
@@ -222,8 +210,6 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Dictionary Attack"
 
-    #### **Dictionary Attack**
-    
     **Basic dictionary attack:**
     ```bash
     sudo aircrack-ng -w /usr/share/wordlists/rockyou.txt handshake-01.cap
@@ -246,8 +232,6 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Brute Force Attack"
 
-    #### **Brute Force Attack**
-    
     **4-way handshake brute force:**
     ```bash
     sudo aircrack-ng -w /usr/share/wordlists/rockyou.txt -b AA:BB:CC:DD:EE:FF handshake-01.cap
@@ -265,8 +249,6 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Hashcat Integration"
 
-    #### **Hashcat Integration**
-    
     **Convert cap to hccapx:**
     ```bash
     cap2hccapx handshake-01.cap handshake.hccapx
@@ -289,11 +271,10 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 ---
 
-## ⌨️ Airodump-ng Keyboard Shortcuts
+## ⌨️ Keyboard Shortcuts
 
 === "Navigation Shortcuts"
 
-    ### **Main Screen Navigation**
     | Key | Action | Description |
     |-----|--------|-------------|
     | ++ctrl+c++ | **Exit** | Stop scanning and exit |
@@ -310,7 +291,6 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Colour Shortcuts"
 
-    ### **Colour Coding Shortcuts**
     | Key | Action | Description |
     |-----|--------|-------------|
     | ++ctrl+m++ | **Mark** | Mark/Unmark AP for targeting |
@@ -334,9 +314,36 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 ---
 
+## 📚 Abbreviations Reference
+
+| Abbreviation | Full Term | Description |
+|--------------|-----------|-------------|
+| **BSSID** | Basic Service Set Identifier | Unique MAC address of the access point |
+| **ESSID** | Extended Service Set Identifier | Network name (what users see) |
+| **MAC** | Media Access Control | Hardware address of network interface |
+| **AP** | Access Point | Wireless router/device providing network |
+| **SSID** | Service Set Identifier | Network name (same as ESSID) |
+| **WPA** | Wi-Fi Protected Access | Wireless security protocol |
+| **WEP** | Wired Equivalent Privacy | Older, weaker wireless security |
+| **WPS** | Wi-Fi Protected Setup | Easy connection method (vulnerable) |
+| **PMKID** | Pairwise Master Key Identifier | WPA3/WPA2 authentication method |
+| **PSK** | Pre-Shared Key | Password for WPA networks |
+| **IV** | Initialization Vector | Used in WEP encryption |
+| **TKIP** | Temporal Key Integrity Protocol | WPA encryption method |
+| **CCMP** | Counter Mode with CBC-MAC Protocol | WPA2 encryption method |
+| **AES** | Advanced Encryption Standard | Strong encryption algorithm |
+| **RSSI** | Received Signal Strength Indicator | Signal strength measurement |
+| **SNR** | Signal-to-Noise Ratio | Signal quality measurement |
+| **VLAN** | Virtual Local Area Network | Network segmentation |
+| **DHCP** | Dynamic Host Configuration Protocol | Automatic IP assignment |
+| **DNS** | Domain Name System | Name resolution service |
+| **NAT** | Network Address Translation | IP address translation |
+| **VPN** | Virtual Private Network | Secure network connection |
+
+---
+
 ## 📋 Quick Reference
 
-### **Essential Commands**
 | Task | Command |
 |------|---------|
 | **Start Monitor** | `sudo airmon-ng start wlan0` |
@@ -346,13 +353,6 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 | **Capture** | `sudo airodump-ng -c 6 --bssid BSSID -w capture wlan0mon` |
 | **Deauth** | `sudo aireplay-ng -0 5 -a BSSID wlan0mon` |
 | **Crack** | `sudo aircrack-ng -w wordlist.txt capture-01.cap` |
-
-### **Key Shortcuts**
-- ++ctrl+c++ - Exit
-- ++ctrl+s++ - Sort options
-- ++ctrl+m++ - Mark AP
-- ++ctrl+t++ - Set target
-- ++ctrl+f++ - Filter by MAC
 
 ---
 
