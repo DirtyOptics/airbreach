@@ -168,6 +168,9 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 === "Active Deauth"
 
     **Terminal 1 - Capture handshake:**
+
+3 
+
     ```bash
     sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w handshake wlan0mon
     ```
