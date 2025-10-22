@@ -167,10 +167,9 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
 === "Active Deauth"
 
-    **Terminal 1 - Capture handshake:**
-
     This kind of capture generally requires the use of multiple adapters and multiple terminal screens. If the target network is not very active, we can essentially 'kick' a client off a network and get it to re-authenticate whilst trying to capture the handshake.
 
+    **Terminal 1 - Capture handshake:**
     ```bash
     sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w handshake wlan0mon
     ```
@@ -182,7 +181,7 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
 
     !!! warning "Active Deauth"
         - **Terminal 1 - Capture handshake**: Starts monitoring the target network for handshakes
-        - **Terminal 3 - Target specific client**: Focuses deauth attack on a specific device
+        - **Terminal 2 - Target specific client**: Focuses deauth attack on a specific device
 
 === "Fake AP Attack"
 
