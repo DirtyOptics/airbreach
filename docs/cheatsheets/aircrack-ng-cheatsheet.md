@@ -47,9 +47,9 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
     ```
 
     !!! warning "Check Kill Method"
-        - **Pros**: Resolves most conflicts
-        - **Cons**: Disrupts network services
-        - **Best for**: Systems with network conflicts
+        - **Kill interfering processes**: Stops NetworkManager and other services that might interfere with monitor mode
+        - **Start monitor mode**: Enables monitor mode after clearing conflicts
+        - **Verify interface**: Confirms the adapter is properly in monitor mode
 
 === "Manual Setup"
     
@@ -74,9 +74,10 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
     ```
 
     !!! danger "Manual Setup"
-        - **Pros**: Full control, bypasses airmon-ng
-        - **Cons**: More complex, requires manual management
-        - **Best for**: Advanced users, troubleshooting
+        - **Bring interface down**: Shuts down the wireless interface before changing mode
+        - **Set monitor mode**: Manually configures the interface for monitor mode
+        - **Bring interface up**: Restarts the interface in monitor mode
+        - **Verify mode**: Confirms the interface is properly configured
 
 ---
 
@@ -100,9 +101,9 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
     ```
 
     !!! tip "Basic Scanning"
-        - **Pros**: Simple, shows all networks
-        - **Cons**: May be overwhelming with many APs
-        - **Best for**: Initial reconnaissance
+        - **Scan all channels**: Discovers all wireless networks across all available channels
+        - **Scan specific channel**: Focuses on a single channel to reduce noise and interference
+        - **Scan multiple channels**: Targets specific channels (like 1, 6, 11) for comprehensive coverage
 
 === "Target Specific"
 
@@ -122,9 +123,9 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
     ```
 
     !!! info "Target Specific"
-        - **Pros**: Focused, less noise
-        - **Cons**: Requires prior knowledge of target
-        - **Best for**: Known targets, specific assessments
+        - **Target by BSSID**: Focuses on a specific access point using its MAC address
+        - **Target by ESSID**: Targets a network by its name (what users see)
+        - **Target with file output**: Captures data to a file for later analysis
 
 === "Advanced Filtering"
 
@@ -144,9 +145,9 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
     ```
 
     !!! warning "Advanced Filtering"
-        - **Pros**: Highly targeted, efficient
-        - **Cons**: May miss important targets
-        - **Best for**: Specific vulnerability assessments
+        - **Filter by encryption**: Shows only networks with specific encryption types (WPA, WEP, etc.)
+        - **Filter by manufacturer**: Targets networks from specific router manufacturers
+        - **Filter by signal strength**: Focuses on networks with strong signal strength
 
 ---
 
@@ -160,10 +161,9 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
     ```
 
     !!! tip "Passive Capture"
-        - **Pros**: No interference, stealthy
-        - **Cons**: Requires patience, depends on client activity
-        - **Best for**: High-traffic networks with regular connections
-        - **Note**: Wait for client to connect naturally and monitor for WPA handshake in top-right corner
+        - **Start capture**: Begins monitoring the target network for authentication handshakes
+        - **Wait for connection**: Patiently waits for clients to connect naturally to the network
+        - **Monitor handshake**: Watch for WPA handshake indicator in the top-right corner of airodump
 
 === "Active Deauth"
 
@@ -183,9 +183,9 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
     ```
 
     !!! warning "Active Deauth"
-        - **Pros**: Faster results, more reliable
-        - **Cons**: More detectable, may cause network disruption
-        - **Best for**: Testing environments, authorized assessments
+        - **Terminal 1 - Capture handshake**: Starts monitoring the target network for handshakes
+        - **Terminal 2 - Deauth attack**: Sends deauthentication packets to disconnect clients
+        - **Terminal 3 - Target specific client**: Focuses deauth attack on a specific device
 
 === "Fake AP Attack"
 
@@ -200,9 +200,9 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
     ```
 
     !!! danger "Fake AP Attack"
-        - **Pros**: Can capture multiple handshakes
-        - **Cons**: Highly detectable, requires careful setup
-        - **Best for**: Advanced testing, social engineering scenarios
+        - **Create fake AP**: Sets up a rogue access point with a tempting name
+        - **Capture handshakes**: Monitors for clients connecting to the fake network
+        - **Social engineering**: Relies on users connecting to the fake "FreeWiFi" network
 
 ---
 
@@ -226,9 +226,9 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
     ```
 
     !!! tip "Dictionary Attack"
-        - **Pros**: Fast with good wordlists, common passwords
-        - **Cons**: Limited to wordlist contents
-        - **Best for**: Common passwords, social engineering
+        - **Basic dictionary attack**: Uses common password lists like rockyou.txt
+        - **Custom wordlist**: Uses specialized wordlists for specific targets
+        - **Multiple wordlists**: Combines several wordlists for comprehensive coverage
 
 === "Brute Force Attack"
 
@@ -243,9 +243,9 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
     ```
 
     !!! warning "Brute Force Attack"
-        - **Pros**: Comprehensive, finds complex passwords
-        - **Cons**: Very slow, resource intensive
-        - **Best for**: Short passwords, targeted attacks
+        - **4-way handshake brute force**: Attempts all possible password combinations
+        - **PMKID attack**: Uses newer PMKID method for faster cracking
+        - **Resource intensive**: Requires significant computational power and time
 
 === "Hashcat Integration"
 
@@ -265,9 +265,9 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
     ```
 
     !!! danger "Hashcat Integration"
-        - **Pros**: GPU acceleration, advanced techniques
-        - **Cons**: Requires powerful hardware, complex setup
-        - **Best for**: Professional assessments, high-performance cracking
+        - **Convert cap to hccapx**: Converts aircrack capture files to hashcat format
+        - **Hashcat attack**: Uses hashcat for advanced password cracking techniques
+        - **GPU acceleration**: Leverages graphics cards for much faster cracking speeds
 
 ---
 
