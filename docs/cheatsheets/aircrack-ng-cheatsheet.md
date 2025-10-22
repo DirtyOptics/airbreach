@@ -25,9 +25,9 @@ A comprehensive reference for wireless security testing with the Aircrack-ng sui
     ```
 
     !!! tip "Basic Setup"
-        - **Pros**: Simple, straightforward
-        - **Cons**: May conflict with NetworkManager
-        - **Best for**: Dedicated testing machines
+        - **Check available interfaces**: Involves having a look at which wireless adapters you have available to aircrack.
+        - **Check Kill**: Will kill all networking services. If you are remote and connected via a modem/VPN, this command may also kill it.
+        - **Manual Setup**: May be required if adapters and interfaces are not playing nicely.
 
 === "Check Kill Method"
     
