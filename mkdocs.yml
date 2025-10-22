@@ -49,6 +49,7 @@ nav:
   - Cheatsheets:
       - Image Reference: cheatsheets/image-cheatsheet.md
       - Aircrack-ng Suite: cheatsheets/aircrack-ng-cheatsheet.md
+      - WiFi Protocols & Channels: cheatsheets/wifi-protocols-channels.md
   - Networking:
       - Setup Nanostation: networking/setup-nanostation.md
       - Advanced Routing: networking/advanced-routing.md
